@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>玩客云刷机教程 | lymhy的个人博客</title><meta name="author" content="lymhy"><meta name="copyright" content="lymhy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="​玩客云刷armbian安装1panel，docker，qb等，经验分享。 一，拆机篇        准备材料                1.数据线,网线各一条                 2.用于短接的镊子                 3.所需软件       撕开玩客云后面的塑料双面胶，拧开螺丝即可。 玩客云v1.0和v3.0的短接图 二，刷armbian固件        接线">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>玩客云刷机教程 | lymhy的个人博客</title><meta name="author" content="lymhy"><meta name="copyright" content="lymhy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="玩客云刷 Armbian 安装 1Panel，Docker，qBittorrent 等经验分享一、拆机篇准备材料 数据线、网线各一条   用于短接的镊子   所需软件  撕开玩客云后面的塑料双面胶，拧开螺丝即可。   玩客云 V1.0 和 V3.0 的短接图    二、刷 Armbian 固件接线在不通电的状态下电脑连接玩客云 HDMI 旁边的 USB 端口，短接后连接电源，此时玩客云指示灯会熄灭">
 <meta property="og:type" content="article">
 <meta property="og:title" content="玩客云刷机教程">
 <meta property="og:url" content="http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="lymhy的个人博客">
-<meta property="og:description" content="​玩客云刷armbian安装1panel，docker，qb等，经验分享。 一，拆机篇        准备材料                1.数据线,网线各一条                 2.用于短接的镊子                 3.所需软件       撕开玩客云后面的塑料双面胶，拧开螺丝即可。 玩客云v1.0和v3.0的短接图 二，刷armbian固件        接线">
+<meta property="og:description" content="玩客云刷 Armbian 安装 1Panel，Docker，qBittorrent 等经验分享一、拆机篇准备材料 数据线、网线各一条   用于短接的镊子   所需软件  撕开玩客云后面的塑料双面胶，拧开螺丝即可。   玩客云 V1.0 和 V3.0 的短接图    二、刷 Armbian 固件接线在不通电的状态下电脑连接玩客云 HDMI 旁边的 USB 端口，短接后连接电源，此时玩客云指示灯会熄灭">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/112370461?v=4">
 <meta property="article:published_time" content="2024-02-10T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-09T04:36:40.099Z">
+<meta property="article:modified_time" content="2025-03-11T09:22:52.364Z">
 <meta property="article:author" content="lymhy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/112370461?v=4"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/",
   "image": "https://avatars.githubusercontent.com/u/112370461?v=4",
   "datePublished": "2024-02-10T04:00:00.000Z",
-  "dateModified": "2025-03-09T04:36:40.099Z",
+  "dateModified": "2025-03-11T09:22:52.364Z",
   "author": [
     {
       "@type": "Person",
@@ -156,154 +156,116 @@
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '玩客云刷机教程',
   isHighlightShrink: false,
-  isToc: false,
+  isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/112370461?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">玩客云刷机教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">玩客云刷机教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-10T04:00:00.000Z" title="发表于 2024-02-10 12:00:00">2024-02-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-09T04:36:40.099Z" title="更新于 2025-03-09 12:36:40">2025-03-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%B7%E6%9C%BA%E6%8C%87%E5%8D%97/">刷机指南</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>​<br>玩客云刷armbian安装1panel，docker，qb等，经验分享。</p>
-<p>一，拆机篇<br>        准备材料<br>                1.数据线,网线各一条</p>
-<p>                2.用于短接的镊子</p>
-<p>                3.所需软件</p>
-<p>      撕开玩客云后面的塑料双面胶，拧开螺丝即可。</p>
-<p>玩客云v1.0和v3.0的短接图</p>
-<p>二，刷armbian固件<br>        接线　　<br>在不通电的状态下电脑连接玩客云HDMI旁边的usb端口，短接后连接电源，此时玩客云指示灯会熄灭，电脑会弹出提示音。</p>
-<p>        刷机　　<br>　　下载usbburningtools2.1.68(听说高于2.2版本会报错)。操作流程：选择文件→导入固件包→点击开始即可，刷写完成后记得点击停止，以免二次刷写。</p>
-<p>　　固件包可以从下面的git仓库下载，一定要选择后面带burn（线刷包）的固件<a target="_blank" rel="noopener" href="https://github.com/hzyitc/armbian-onecloud">https://github.com/hzyitc/armbian-onecloud</a></p>
-<p>　           burn 线刷包，edge 开发版，current稳定版， mini核心板</p>
-<p>　　下载完成后解压为img后缀的文件</p>
-<p>　　</p>
-<p>　　刷写完成后准备重启玩客云，连接电源,网线到路由器，玩客云指示灯闪烁后稳定，开机成功。可以修改默认的主机名，命令如下：</p>
-<p>hostnamectl set-hostname name<br>tips：name改成你自己想要的主机名即可。</p>
-<p>　    登录玩客云<br>　　使用ssh工具(常见的如putty，xshell等ssh客户端)连接玩客云IP，IP在路由器管理后台即可查到。　</p>
-<p> ssh root@玩客云IP</p>
-<p>　　首次登录要求更新密码，输入密码后会提示创建账户，不想创建可以ctrl+c跳过，不跳过会进入创建账户，选择bash,时区,语言等。</p>
-<p>        检查时区<br>date-R</p>
-<p>　　 非国区需要更改时区： </p>
-<p> cp&#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai&#x2F;etc&#x2F;localtime</p>
-<p>        换源<br>             软件可以正常安装可以不替换。</p>
-<p>             打开源编辑列表        </p>
-<p> nano&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
-<p>            换源是可以把原先的软件源用“#”注释掉，防止误删后悔。</p>
-<p>#阿里源</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian-security/bullseye-security">https://mirrors.aliyun.com/debian-security/bullseye-security</a> main</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian-security/bullseye-security">https://mirrors.aliyun.com/debian-security/bullseye-security</a> main</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-updates">https://mirrors.aliyun.com/debian/bullseye-updates</a> main non-free contrib</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-updates">https://mirrors.aliyun.com/debian/bullseye-updates</a> main non-free contrib</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-backports">https://mirrors.aliyun.com/debian/bullseye-backports</a> main non-free contrib</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-backports">https://mirrors.aliyun.com/debian/bullseye-backports</a> main non-free contrib</p>
-<p>#中科大源</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye">https://mirrors.aliyun.com/debian/bullseye</a> main non-free contrib</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye">https://mirrors.aliyun.com/debian/bullseye</a> main non-free contrib</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian-security/bullseye-security">https://mirrors.aliyun.com/debian-security/bullseye-security</a> main</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian-security/bullseye-security">https://mirrors.aliyun.com/debian-security/bullseye-security</a> main</p>
-<p>deb <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-updates">https://mirrors.aliyun.com/debian/bullseye-updates</a> main non-free contrib</p>
-<p>#deb-src <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/debian/bullseye-updates">https://mirrors.aliyun.com/debian/bullseye-updates</a> main non-free contrib<br>随便选一个添加即可。</p>
-<p>          修改完后按Ctrl+O保存，再按Ctrl+X退出或者先退出，y确认保存。</p>
-<p>       更新(非必要)
-         </p>
-<p>apt-getupdate &amp;&amp; apt-getupgrade
-             </p>
-<p>　　自此armbian安装完成。</p>
-<p>三，应用篇<br>　　本篇文章一共推荐俩个管理面板，供读者自由选择。</p>
-<p>　　1.安装1panel　　<br>　curl -sSL <a target="_blank" rel="noopener" href="https://resource.fit2cloud.com/1panel/package/quick_start.sh">https://resource.fit2cloud.com/1panel/package/quick_start.sh</a> -o quick_start.sh &amp;&amp; bash quick_start.sh<br>　　2.安装casaos　　<br>curl -fsSL <a target="_blank" rel="noopener" href="https://get.casaos.io/">https://get.casaos.io</a> | sudo <br> 　 网络不好的人可以试试这个国内源(使用国内源安装无法自动升级casaos)</p>
-<p>wget -qO- <a target="_blank" rel="noopener" href="https://get.casaos.io/">https://get.casaos.io</a> | bash<br>　　3.安装docker<br>apt install docker.io<br>　　4.安装qbittorrent<br>由于玩客云32位处理器，而面板提供的bt软件均为64位版本，我们需要通过APT自行安装。</p>
-<p>　　默认账号：admin</p>
-<p>　　默认密码：adminadmin</p>
-<p>　　执行以下命令　　　</p>
-<p>sudo apt install qbittorrent-nox<br>　　通过nano文本编辑器打开qbittorrent服务文件            </p>
-<p>  nano &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;qbittorrent.service<br>         输入以下内容（配置信息）后，ctrl+x保存。         　</p>
-<p>　              [Unit]</p>
-<p>                Description&#x3D;qBittorrent Daemon Service</p>
-<p>                After&#x3D;network.target</p>
-<p>                [Service]</p>
-<p>                User&#x3D;root</p>
-<p>                ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;qbittorrent-nox</p>
-<p>                ExecStop&#x3D;&#x2F;usr&#x2F;bin&#x2F;killall -w qbittorrent-nox</p>
-<p>                [Install]</p>
-<p>                WantedBy&#x3D;multi-user.target<br>         执行以下命令，更新刚刚配置的服务，设置开机启动以及现在启动该服务。         　</p>
-<p>　sudo systemctl daemon-reload</p>
-<p>  sudo systemctl enable qbittorrent.service</p>
-<p>  sudo systemctl start qbittorrent.service
-                  </p>
-<p>     5.安装Samba（文件共享）<br>    执行以下命令，更新软件包列表，并通过APT安装Samba应用。</p>
-<p>sudo apt update<br>sudo apt install samba<br>查看安装状态</p>
-<p>systemctl status nmbd<br>    执行以下命令，打开Samba的配置文件。</p>
-<p>sudo nano &#x2F;etc&#x2F;samba&#x2F;smb.conf<br>    在文件的末尾添加以下内容（配置信息）后，Ctrl+X保存，以创建共享。</p>
-<p>[共享显示的名称，可自定义]</p>
-<p>[flash]</p>
-<p>#自定义备注信息</p>
-<p>comment &#x3D; flash</p>
-<p>#路径，下列是我的共享路径，要设置成你的，怎么查询路径，打开面板,找到文件夹图标打开，左侧位置&gt;下面找到要挂载的U盘，鼠标移到目标文件夹右边的点，点击选择拷贝路径，再粘贴到path</p>
-<p>path &#x3D; &#x2F;media&#x2F;devmon&#x2F;sda1-usb-Netac_OnlyDisk_5&#x2F;lost+found&#x2F;</p>
-<p>#共享用户名</p>
-<p>valid users &#x3D; root</p>
-<p>#只读 yes&#x3D;是 no&#x3D;否</p>
-<p>read only &#x3D; no</p>
-<p>#来宾</p>
-<p>guest ok &#x3D; no</p>
-<p>#创建文件时权限，权限按需设置</p>
-<p>create maks &#x3D; 0777</p>
-<p>#创建目录时权限，权限按需设置</p>
-<p>directory mask &#x3D; 0777</p>
-<p>#是否可被看见</p>
-<p>browseable &#x3D; yes</p>
-<p>available &#x3D; yes</p>
-<p>writable &#x3D; yes<br>    上述设置会默认共享root目录，如不想显示root目录，可以增加在[homes]节点中，“comment &#x3D; Home Directories”，“browseable &#x3D; no”的下面增加下列配置信息。</p>
-<p>#是否可被看见</p>
-<p>browseable &#x3D; no</p>
-<p>available &#x3D; no</p>
-<p>writable &#x3D; no<br>    创建用户密码，注意用户名是否是第2步骤用户名。</p>
-<p>sudo smbpasswd -a root<br>    执行以下命令，重启Samba服务以应用配置更改。</p>
-<p>sudo systemctl restart smbd<br>    执行以下命令，设置Samba开机自启。</p>
-<p>sudo systemctl start smbd<br>sudo systemctl enable smbd<br>6.安装Cpolar（内网穿透）<br>    执行以下代码，安装Cpolar。</p>
-<p>curl -L <a target="_blank" rel="noopener" href="https://www.cpolar.com/static/downloads/install-release-cpolar.sh">https://www.cpolar.com/static/downloads/install-release-cpolar.sh</a> | sudo bash<br>    查看版本号，正常显示版本号及安装成功。</p>
-<p>cpolar version<br>    登录cpolar官网后台，点击左侧的验证，查看自己的认证token，之后将token贴在命令行里。</p>
-<p>cpolar authtoken xxxxxx<br>    向系统添加服务。</p>
-<p>sudo systemctl enable cpolar<br>    启动cpolar服务</p>
-<p>sudo systemctl start cpolar<br>    在浏览器上访问本地端口http:&#x2F;&#x2F;玩客云IP:9200,使用cpolar邮箱账号登录Cpolar web UI管理界面，即可开始使用cpolar。</p>
-<p>    登录完cpolar本地管理界面后，在“隧道管理”-“创建隧道”中，可以给SSH、CasaOS、qBittorrent等创建隧道（端口）这样就可以实现远程访问了。</p>
-<p>参考Cpolar的官方文档：<a target="_blank" rel="noopener" href="https://www.cpolar.com/docs">https://www.cpolar.com/docs</a></p>
-<p>7.安装Portainer<br>直接输入命令</p>
-<p>docker volume create portainer_data<br>docker run -d -p 9000:9000 -p 8000:8000 –name portainer –restart always -v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock -v portainer_data:&#x2F;data portainer&#x2F;portainer-ce:latest<br>访问玩客云ip+端口9000就可以进入prtainer</p>
-<p>8.安装Home Assistant<br>输入一下命令   </p>
-<p>docker pull homeassistant&#x2F;home-assistant<br>然后在prtainer里面创建容器，选择刚才拉取的镜像文件。</p>
-<p>然后通过玩客云IP+8123端口访问，出现配置界面。</p>
-<p>9.常见的默认端口<br>CasaOS：8181</p>
-<p>Cpolar：9200</p>
-<p>qBittorrent ：8080</p>
-<p>FAST OS DOCKER：8081</p>
-<p>青龙：5700</p>
-<p>Home Assistant：8123</p>
-<p>四，几个常见命令<br>为了方便对linux系统不熟悉的玩家，笔者在下面写几个常见命令给大家参考。</p>
-<p>linux常见的两个查找命令<br>　　eee.txt为查找的文件名</p>
-<p>　　find &#x2F;-name eee.txt 和 locate eee.txt</p>
-<p>　　</p>
-<p>linux修改文件夹权限<br>        sudo chmod 600 ××× （仅所有者读和写的权限）</p>
-<p>        sudo chmod 644 ××× （所有者读和写的权限，组用户只有读的权限）</p>
-<p>        sudo chmod 700 ××× （仅所有者有读和写以及执行的权限）</p>
-<p>        sudo chmod 666 ××× （每个人都有读和写的权限）</p>
-<p>        sudo chmod 777 ××× （每个人都有读和写以及执行的权限）</p>
-<p>tip:以上方法只能改变单个文件或文件夹</p>
-<p>修改文件夹下所有文件的权限</p>
-<p>        sudo chmod -R 777 filename(文件名路径)</p>
-<p>filename为要修改的文件夹名字。-R应该是表示递归修改filename文件夹下所有文件的权限。</p>
-<p>其实整个命令的形式是</p>
-<p>        sudo chmod -（代表类型）×××（所有者）×××（组用户）×××（其他用户）</p>
-<p>三位数的每一位都表示一个用户类型的权限设置。取值是0～7，即二进制的[000]~[111]。</p>
-<p>这个三位的二进制数的每一位分别表示读、写、执行权限。</p>
-<p>如000表示三项权限均无，而100表示只读。这样，就有了下面的对应：</p>
-<p>        0 [000] 无任何权限</p>
-<p>        4 [100] 只读权限</p>
-<p>        6 [110] 读写权限</p>
-<p>        7 [111] 读写执行权限</p>
-<p>查询文件（或文件夹）权限的命令<br>        ls -l 文件名称 （文件夹将-l改为-ld）</p>
-<p>        为所有者（u）增加脚本执行权限(+v)</p>
-<p>        chmod u+x install_nginx.sh</p>
-<p>常见的APT命令<br>        apt-get clean - 删除所有已下载的包文件</p>
-<p>        apt-get update - 取回更新的软件包列表信息</p>
-<p>        apt-get upgrade - 进行一次升级</p>
-<p>　　  </p>
-<p>                </p>
-<p>　　　　</p>
-<p>　　　　</p>
-<p>　　</p>
-<p>​</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">lymhy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/">http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">lymhy的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/112370461?v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/08/26/%E9%9A%8F%E8%BA%ABwifi%E5%88%B7%E6%9C%BA%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="随身wifi刷机入门指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">随身wifi刷机入门指南</div></div><div class="info-2"><div class="info-item-1">​前言:本教程适用于高通骁龙芯片的随身WiFi（简称棒子）的教程，不适用其他芯片和大厂棒子型号。 刷机前检查棒子功能是否正常，部分文件可能会报毒，事先添加系统的白名单或关闭实时保护。 1.打驱动。安装adb和9008驱动，双击安装启动文件即可。adb运行方法是点击文件夹路径栏空白处输入cmd回车。 运行后后续操作可能发生冲突，进入设备管理器更换或卸载adb驱动即可。 2.备份系统包。棒子插入电脑，开机后在adb窗口输入  adb devices   有显示代表连接正常，继续下一步操作。 进入9008，有两个方法。  一是adb窗口输入adb reboot edl    二是按住棒子强刷键进入9008。      tips:如果adb损坏可以尝试第二种方法，如果没有备份包的话一般来说救不回来了。 miko篇  安装miko 运行miko loader，安装后桌面的快捷方式没有用可以删掉。   确保棒子在9008，按照图示步骤操作。 保存好bin文件。卡0多试几次重新9008，检查设备供电是否正常。 恢复教程 Qualcomm Premium Tool...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/112370461?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">lymhy</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lymhy"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/07/hello-world/" title="Hello World">Hello World</a><time datetime="2025-03-07T07:46:50.769Z" title="发表于 2025-03-07 15:46:50">2025-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/26/%E9%9A%8F%E8%BA%ABwifi%E5%88%B7%E6%9C%BA%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="随身wifi刷机入门指南">随身wifi刷机入门指南</a><time datetime="2024-08-26T04:00:00.000Z" title="发表于 2024-08-26 12:00:00">2024-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" title="玩客云刷机教程">玩客云刷机教程</a><time datetime="2024-02-10T04:00:00.000Z" title="发表于 2024-02-10 12:00:00">2024-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By lymhy</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-overlay"></div><div class="spinner-box"><div class="load_15"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div><div class="loading-text">加载中...</div></div></div><script>(() => {
+  const $loadingBox = document.getElementById('loading-box');
+  const $body = document.body;
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = '';
+      $loadingBox.classList.add('loaded');
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden';
+      $loadingBox.classList.remove('loaded');
+    }
+  };
+
+  preloader.initLoading();
+  setTimeout(function(){preloader.endLoading();}, 1000);
+  window.addEventListener('load', preloader.endLoading);
+  setTimeout(function(){preloader.endLoading();}, 5000);
+
+  if (theme.pjax && theme.pjax.enable) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init');
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end');
+  }
+})();</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/112370461?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">玩客云刷机教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">玩客云刷机教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-10T04:00:00.000Z" title="发表于 2024-02-10 12:00:00">2024-02-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-11T09:22:52.364Z" title="更新于 2025-03-11 17:22:52">2025-03-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%B7%E6%9C%BA%E6%8C%87%E5%8D%97/">刷机指南</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="玩客云刷-Armbian-安装-1Panel，Docker，qBittorrent-等经验分享"><a href="#玩客云刷-Armbian-安装-1Panel，Docker，qBittorrent-等经验分享" class="headerlink" title="玩客云刷 Armbian 安装 1Panel，Docker，qBittorrent 等经验分享"></a>玩客云刷 Armbian 安装 1Panel，Docker，qBittorrent 等经验分享</h1><h2 id="一、拆机篇"><a href="#一、拆机篇" class="headerlink" title="一、拆机篇"></a>一、拆机篇</h2><h3 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料"></a>准备材料</h3><ol>
+<li>数据线、网线各一条  </li>
+<li>用于短接的镊子  </li>
+<li>所需软件</li>
+</ol>
+<p>撕开玩客云后面的塑料双面胶，拧开螺丝即可。  </p>
+<p>玩客云 V1.0 和 V3.0 的短接图  </p>
+<hr>
+<h2 id="二、刷-Armbian-固件"><a href="#二、刷-Armbian-固件" class="headerlink" title="二、刷 Armbian 固件"></a>二、刷 Armbian 固件</h2><h3 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h3><p>在不通电的状态下电脑连接玩客云 HDMI 旁边的 USB 端口，短接后连接电源，此时玩客云指示灯会熄灭，电脑会弹出提示音。</p>
+<h3 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h3><ol>
+<li><p>下载 <strong>usbburningtools 2.1.68</strong>（高于 2.2 版本可能会报错）。<br>操作流程：选择文件→导入固件包→点击开始即可。刷写完成后记得点击停止，以免二次刷写。</p>
+</li>
+<li><p>固件包可从以下 Git 仓库下载（选择后面带 burn 的线刷包）：<br><a target="_blank" rel="noopener" href="https://github.com/hzyitc/armbian-onecloud">Armbian Onecloud GitHub</a>  </p>
+<p> 固件类型说明：  </p>
+<ul>
+<li>burn 线刷包  </li>
+<li>edge 开发版  </li>
+<li>current 稳定版  </li>
+<li>mini 核心板</li>
+</ul>
+</li>
+<li><p>下载后解压为 <code>.img</code> 后缀文件。</p>
+</li>
+</ol>
+<p>完成刷写后，重新启动玩客云，连接电源、网线到路由器。玩客云指示灯闪烁后稳定表示开机成功。</p>
+<h3 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname name</span><br></pre></td></tr></table></figure>
+<p><strong>Tips</strong>：<code>name</code> 替换成您自己想要的主机名即可。</p>
+<h3 id="登录玩客云"><a href="#登录玩客云" class="headerlink" title="登录玩客云"></a>登录玩客云</h3><p>使用 SSH 工具（如 Putty 或 Xshell）连接玩客云 IP（可在路由器管理后台查看）。  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@玩客云IP</span><br></pre></td></tr></table></figure>
+<p>首次登录会要求更新密码，设置完成后会提示创建账户。  </p>
+<ul>
+<li>不想创建可按 <code>Ctrl+C</code> 跳过。  </li>
+<li>不跳过将进入创建账户阶段，可选择 bash、时区、语言等。</li>
+</ul>
+<h3 id="检查时区"><a href="#检查时区" class="headerlink" title="检查时区"></a>检查时区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">date</span> -R</span><br></pre></td></tr></table></figure>
+<p>如非国区需要更改时区：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br></pre></td></tr></table></figure>
+
+<h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><p>打开源编辑列表：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>换源时可将原有的软件源用 <code>#</code> 注释掉，以免误删后悔。</p>
+<h4 id="阿里源"><a href="#阿里源" class="headerlink" title="阿里源"></a>阿里源</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.aliyun.com/debian-security/bullseye-security main</span><br><span class="line">deb https://mirrors.aliyun.com/debian/bullseye-updates main non-free contrib</span><br><span class="line">deb https://mirrors.aliyun.com/debian/bullseye-backports main non-free contrib</span><br></pre></td></tr></table></figure>
+<h4 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.ustc.edu.cn/debian/bullseye main non-free contrib</span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security/bullseye-security main</span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/bullseye-updates main non-free contrib</span><br></pre></td></tr></table></figure>
+
+<p>修改完后，按 <code>Ctrl+O</code> 保存，再按 <code>Ctrl+X</code> 退出。</p>
+<h3 id="更新系统（非必要）"><a href="#更新系统（非必要）" class="headerlink" title="更新系统（非必要）"></a>更新系统（非必要）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update &amp;&amp; apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、应用篇"><a href="#三、应用篇" class="headerlink" title="三、应用篇"></a>三、应用篇</h2><p>以下推荐两款管理面板，供读者选择：</p>
+<h3 id="1-安装-1Panel"><a href="#1-安装-1Panel" class="headerlink" title="1. 安装 1Panel"></a>1. 安装 1Panel</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; bash quick_start.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-安装-CasaOS"><a href="#2-安装-CasaOS" class="headerlink" title="2. 安装 CasaOS"></a>2. 安装 CasaOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.casaos.io | <span class="built_in">sudo</span> bash</span><br></pre></td></tr></table></figure>
+<p>如网络不好，可尝试国内源（但无法自动升级 CasaOS）：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://get.casaos.io | bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-安装-Docker"><a href="#3-安装-Docker" class="headerlink" title="3. 安装 Docker"></a>3. 安装 Docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install docker.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-安装-qBittorrent"><a href="#4-安装-qBittorrent" class="headerlink" title="4. 安装 qBittorrent"></a>4. 安装 qBittorrent</h3><p>由于玩客云为 32 位处理器，而面板提供的 BT 软件均为 64 位版本，因此需要通过 APT 自行安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install qbittorrent-nox</span><br></pre></td></tr></table></figure>
+<h4 id="编辑-qBittorrent-服务文件"><a href="#编辑-qBittorrent-服务文件" class="headerlink" title="编辑 qBittorrent 服务文件"></a>编辑 qBittorrent 服务文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/systemd/system/qbittorrent.service</span><br></pre></td></tr></table></figure>
+<p>配置文件内容如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=qBittorrent Daemon Service</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=root</span><br><span class="line">ExecStart=/usr/bin/qbittorrent-nox</span><br><span class="line">ExecStop=/usr/bin/killall -w qbittorrent-nox</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>保存并执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl daemon-reload</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> qbittorrent.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl start qbittorrent.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-安装-Samba（文件共享）"><a href="#5-安装-Samba（文件共享）" class="headerlink" title="5. 安装 Samba（文件共享）"></a>5. 安装 Samba（文件共享）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install samba</span><br><span class="line"><span class="built_in">sudo</span> nano /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+<p>在文件末尾添加共享配置：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[flash]</span><br><span class="line">comment = Flash Shared Folder</span><br><span class="line">path = /media/devmon/sda1-usb-Netac_OnlyDisk_5/lost+found/</span><br><span class="line">valid users = root</span><br><span class="line">read only = no</span><br><span class="line">browseable = yes</span><br><span class="line">available = yes</span><br><span class="line">writable = yes</span><br></pre></td></tr></table></figure>
+<p>创建用户密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> smbpasswd -a root</span><br></pre></td></tr></table></figure>
+<p>重启 Samba 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart smbd</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> smbd</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-安装-Cpolar（内网穿透）"><a href="#6-安装-Cpolar（内网穿透）" class="headerlink" title="6. 安装 Cpolar（内网穿透）"></a>6. 安装 Cpolar（内网穿透）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | <span class="built_in">sudo</span> bash</span><br><span class="line">cpolar authtoken xxxxxx</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> cpolar</span><br><span class="line"><span class="built_in">sudo</span> systemctl start cpolar</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-安装-Portainer"><a href="#7-安装-Portainer" class="headerlink" title="7. 安装 Portainer"></a>7. 安装 Portainer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker volume create portainer_data</span><br><span class="line">docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-安装-Home-Assistant"><a href="#8-安装-Home-Assistant" class="headerlink" title="8. 安装 Home Assistant"></a>8. 安装 Home Assistant</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull homeassistant/home-assistant</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="四、几个常见命令"><a href="#四、几个常见命令" class="headerlink" title="四、几个常见命令"></a>四、几个常见命令</h2><h3 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find / -name eee.txt</span><br><span class="line">locate eee.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改文件夹权限"><a href="#修改文件夹权限" class="headerlink" title="修改文件夹权限"></a>修改文件夹权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 777 filename</span><br></pre></td></tr></table></figure>
+
+<h3 id="APT-常见命令"><a href="#APT-常见命令" class="headerlink" title="APT 常见命令"></a>APT 常见命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get clean       <span class="comment"># 删除所有已下载包文件</span></span><br><span class="line">apt-get update      <span class="comment"># 更新软件包列表</span></span><br><span class="line">apt-get upgrade     <span class="comment"># 系统升级</span></span><br></pre></td></tr></table></figure>
+<pre><code>
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">lymhy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/">http://example.com/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">lymhy的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/112370461?v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/08/26/%E9%9A%8F%E8%BA%ABwifi%E5%88%B7%E6%9C%BA%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="随身wifi刷机入门指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">随身wifi刷机入门指南</div></div><div class="info-2"><div class="info-item-1">高通骁龙芯片随身WiFi（棒子）刷机教程前言本教程适用于高通骁龙芯片的随身WiFi（简称棒子）的教程，不适用其他芯片和大厂棒子型号。 刷机前检查棒子功能是否正常，部分文件可能会报毒，事先添加系统的白名单或关闭实时保护。  1. 打驱动安装adb和9008驱动，双击安装启动文件即可。 adb运行方法是点击文件夹路径栏空白处输入cmd回车。  2. 检查功能刷机后后续操作可能发生冲突，进入设备管理器更换或卸载adb驱动即可。  备份系统包-棒子插入电脑，开机后在adb窗口输入： 1adb devices 有显示代表连接正常，继续下一步操作。  进入9008-有两个方法：  一是adb窗口输入：   1adb reboot edl   二是按住棒子强刷键进入9008。  提示：如果adb损坏可以尝试第二种方法，如果没有备份包的话一般来说救不回来了。    3. miko篇安装miko并运行miko loader，安装后桌面的快捷方式没有用可以删掉。 确保棒子在9008，按照图示步骤操作。 保存好bin文件。卡0多试几次重新9008，检查设备供电是否正常。  4....</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/112370461?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">lymhy</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lymhy"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7-Armbian-%E5%AE%89%E8%A3%85-1Panel%EF%BC%8CDocker%EF%BC%8CqBittorrent-%E7%AD%89%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB"><span class="toc-number">1.</span> <span class="toc-text">玩客云刷 Armbian 安装 1Panel，Docker，qBittorrent 等经验分享</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8B%86%E6%9C%BA%E7%AF%87"><span class="toc-number">1.1.</span> <span class="toc-text">一、拆机篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E6%9D%90%E6%96%99"><span class="toc-number">1.1.1.</span> <span class="toc-text">准备材料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%B7-Armbian-%E5%9B%BA%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、刷 Armbian 固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E7%BA%BF"><span class="toc-number">1.2.1.</span> <span class="toc-text">接线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA"><span class="toc-number">1.2.2.</span> <span class="toc-text">刷机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="toc-number">1.2.3.</span> <span class="toc-text">修改主机名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E7%8E%A9%E5%AE%A2%E4%BA%91"><span class="toc-number">1.2.4.</span> <span class="toc-text">登录玩客云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%97%B6%E5%8C%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text">检查时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">1.2.6.</span> <span class="toc-text">换源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E6%BA%90"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">阿里源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%BA%90"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">中科大源</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%EF%BC%88%E9%9D%9E%E5%BF%85%E8%A6%81%EF%BC%89"><span class="toc-number">1.2.7.</span> <span class="toc-text">更新系统（非必要）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BA%94%E7%94%A8%E7%AF%87"><span class="toc-number">1.3.</span> <span class="toc-text">三、应用篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-1Panel"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 安装 1Panel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85-CasaOS"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 安装 CasaOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85-Docker"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 安装 Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85-qBittorrent"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 安装 qBittorrent</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%BE%91-qBittorrent-%E6%9C%8D%E5%8A%A1%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">编辑 qBittorrent 服务文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AE%89%E8%A3%85-Samba%EF%BC%88%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%EF%BC%89"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 安装 Samba（文件共享）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%89%E8%A3%85-Cpolar%EF%BC%88%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%89"><span class="toc-number">1.3.6.</span> <span class="toc-text">6. 安装 Cpolar（内网穿透）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%AE%89%E8%A3%85-Portainer"><span class="toc-number">1.3.7.</span> <span class="toc-text">7. 安装 Portainer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%AE%89%E8%A3%85-Home-Assistant"><span class="toc-number">1.3.8.</span> <span class="toc-text">8. 安装 Home Assistant</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%87%A0%E4%B8%AA%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.</span> <span class="toc-text">四、几个常见命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.1.</span> <span class="toc-text">查找文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90"><span class="toc-number">1.4.2.</span> <span class="toc-text">修改文件夹权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#APT-%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.3.</span> <span class="toc-text">APT 常见命令</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/07/hello-world/" title="Hello World">Hello World</a><time datetime="2025-03-07T07:46:50.769Z" title="发表于 2025-03-07 15:46:50">2025-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/26/%E9%9A%8F%E8%BA%ABwifi%E5%88%B7%E6%9C%BA%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="随身wifi刷机入门指南">随身wifi刷机入门指南</a><time datetime="2024-08-26T04:00:00.000Z" title="发表于 2024-08-26 12:00:00">2024-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/10/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" title="玩客云刷机教程">玩客云刷机教程</a><time datetime="2024-02-10T04:00:00.000Z" title="发表于 2024-02-10 12:00:00">2024-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By lymhy</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
