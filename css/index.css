@@ -3921,26 +3921,11 @@ figure.highlight pre .javascript .function {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-  overflow: hidden;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -ms-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-animation: showLoading 0.3s 0s backwards;
-  -moz-animation: showLoading 0.3s 0s backwards;
-  -o-animation: showLoading 0.3s 0s backwards;
-  -ms-animation: showLoading 0.3s 0s backwards;
-  animation: showLoading 0.3s 0s backwards;
-}
-.loading-bg::-webkit-scrollbar {
-  display: none;
-}
-#loading-box {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
 }
 #loading-box .loading-img {
   width: 100px;
@@ -3948,11 +3933,11 @@ figure.highlight pre .javascript .function {
   border-radius: 50%;
   margin: auto;
   border: 4px solid #f0f0f2;
-  -webkit-animation-duration: 0.2s;
-  -moz-animation-duration: 0.2s;
-  -o-animation-duration: 0.2s;
-  -ms-animation-duration: 0.2s;
-  animation-duration: 0.2s;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-name: loadingAction;
   -moz-animation-name: loadingAction;
   -o-animation-name: loadingAction;
@@ -4037,6 +4022,10 @@ figure.highlight pre .javascript .function {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     filter: alpha(opacity=40);
   }
+}
+.loading-img {
+  background: url("/picture/page/avatar.jpg") no-repeat center center;
+  background-size: cover;
 }
 #pagination .pagination {
   margin-top: 20px;
