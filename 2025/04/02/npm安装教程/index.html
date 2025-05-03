@@ -176,31 +176,20 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box" aria-hidden="true"><div class="loading-bg"><svg class="loading-svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle></svg><img class="loading-avatar nolazyload" src= "/picture/page/post_loading.gif" data-lazy-src="/picture/page/avatar.jpg" alt="加载头像"/><div class="loading-text">正在加载中...</div></div></div><script>const preloader = {
-  end: () => document.getElementById("loading-box").classList.add("loaded"),
-  start: () => document.getElementById("loading-box").classList.remove("loaded")
-};
-
-const loadStart = performance.now();
-const isFirstVisit = !sessionStorage.getItem("hasVisited");
-
-window.addEventListener("load", () => {
-  const loadTime = performance.now() - loadStart;
-  if (isFirstVisit) {
-    setTimeout(() => preloader.end(), 800);
-    sessionStorage.setItem("hasVisited", "true");
-  } else if (loadTime < 200) {
-    preloader.end();
-  } else {
-    setTimeout(() => preloader.end(), 300);
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src= "/picture/page/post_loading.gif" data-lazy-src="/picture/page/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
   }
-});
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-if (typeof pjax !== "undefined") {
-  document.addEventListener("pjax:send", preloader.start);
-  document.addEventListener("pjax:complete", () => {
-    setTimeout(preloader.end, 300);
-  });
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 }</script><div id="web_bg" style="background-image: url(/picture/page/fufu.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "/picture/page/post_loading.gif" data-lazy-src="/picture/page/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">npm安装教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">npm安装教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-04-02T08:55:34.000Z" title="发表于 2025-04-02 16:55:34">2025-04-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-01T08:09:38.992Z" title="更新于 2025-05-01 16:09:38">2025-05-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%AE%9E%E6%88%98/">软件安装实战</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="下载并安装-Node-js"><a href="#下载并安装-Node-js" class="headerlink" title="下载并安装 Node.js"></a>下载并安装 Node.js</h2><p>首先从官网下载 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a> 安装包。<br>由于系统会默认将本地仓库放在 C 盘，在修改过程中经常忘记文件位置，为了管理方便，需要更改 npm 的全局目录 <code>node_global</code> 和 npm 缓存文件夹 <code>node_cache</code>。<br>如果没有设置全局目录 <code>node_global</code>，那么全局安装的文件将会保存到：<code>C:\Users\自己的计算机名\AppData\Roaming\npm</code></p>
 <hr>
 <h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ol>
