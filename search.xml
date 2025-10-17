@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>OpenWrt固件的选择与使用</title>
+      <title>OpenWrt固件的选择与使用指南</title>
       <link href="/posts/446b.html"/>
       <url>/posts/446b.html</url>
       
@@ -345,17 +345,6 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于我</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -367,9 +356,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -378,9 +367,20 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
