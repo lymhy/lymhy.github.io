@@ -2,185 +2,188 @@
 Sitemap: https://www.520690.xyz/sitemap.xml
 # 说明：指向你的网站地图（由 hexo-generator-sitemap 生成），帮助搜索引擎高效索引网站内容。
 
+User-agent: *
+Allow: /
+
 User-agent: AI2Bot
 Disallow: /
-# 说明：AI2Bot 由 Allen Institute for Artificial Intelligence (AI2) 运营，用于 AI 研究和数据收集。阻止它以避免内容被用于 AI 模型训练。
+# 说明：AI2Bot 由 Allen Institute for Artificial Intelligence (AI2) 运营，用于 AI 研究和数据收集。
 
 User-agent: Amazonbot
 Disallow: /
-# 说明：Amazonbot 是亚马逊的爬虫，用于产品索引、价格比较或 Alexa 等 AI 服务。阻止它以防止内容被用于商业 AI 目的。
+# 说明：Amazonbot 是亚马逊的爬虫，用于产品索引、价格比较或 Alexa 等 AI 服务。
 
 User-agent: amazon-kendra
 Disallow: /
-# 说明：amazon-kendra 是亚马逊的智能搜索服务 Kendra 的爬虫，用于企业搜索索引。阻止它以避免内容被用于亚马逊的 AI 系统。
+# 说明：amazon-kendra 是亚马逊的智能搜索服务 Kendra 的爬虫，用于企业搜索索引。
 
 User-agent: anthropic-ai
 Disallow: /
-# 说明：anthropic-ai 由 Anthropic 运营，开发 Claude 等 AI 模型。阻止它以防止内容被用于 AI 训练。
+# 说明：anthropic-ai 由 Anthropic 运营，开发 Claude 等 AI 模型。
 
 User-agent: Applebot
 Disallow: /
-# 说明：Applebot 是苹果的爬虫，用于 Siri 和 Spotlight 搜索，可能支持 AI 服务。阻止它以确保内容不被用于苹果的 AI 生态。
+# 说明：Applebot 是苹果的爬虫，用于 Siri 和 Spotlight 搜索，可能支持 AI 服务。
 
 User-agent: Applebot-Extended
 Disallow: /
-# 说明：Applebot-Extended 是 Applebot 的扩展版本，可能用于额外数据收集或 AI 训练。阻止它以进一步限制苹果的访问。
+# 说明：Applebot-Extended 是 Applebot 的扩展版本，可能用于额外数据收集或 AI 训练。
 
 User-agent: AwarioRssBot
 Disallow: /
-# 说明：AwarioRssBot 由 Awario 运营，用于社交媒体和网页监控，可能用于 AI 分析。阻止它以防止未经授权的数据收集。
+# 说明：AwarioRssBot 由 Awario 运营，用于社交媒体和网页监控，可能用于 AI 分析。
 
 User-agent: AwarioSmartBot
 Disallow: /
-# 说明：AwarioSmartBot 是 Awario 的另一个爬虫，可能用于高级网页抓取或分析。阻止它以避免内容被用于 AI 或监控。
+# 说明：AwarioSmartBot 是 Awario 的另一个爬虫，可能用于高级网页抓取或分析。
 
 User-agent: Brightbot
 Disallow: /
-# 说明：Brightbot 由 BrightEdge 运营，是数字营销和 SEO 平台的爬虫，可能用于 AI 驱动的分析。阻止它以限制商业数据使用。
+# 说明：Brightbot 由 BrightEdge 运营，是数字营销和 SEO 平台的爬虫，可能用于 AI 驱动的分析。
 
 User-agent: Bytespider
 Disallow: /
-# 说明：Bytespider 是字节跳动（TikTok 母公司）的爬虫，用于内容索引或 AI 训练。阻止它以防止内容被用于字节跳动的 AI 系统。
+# 说明：Bytespider 是字节跳动（TikTok 母公司）的爬虫，用于内容索引或 AI 训练。
 
 User-agent: ChatGPT-User
 Disallow: /
-# 说明：ChatGPT-User 由 OpenAI 运营，表示通过 ChatGPT 的用户查询。阻止它以防止内容被 OpenAI 的 AI 模型访问。
+# 说明：ChatGPT-User 由 OpenAI 运营，表示通过 ChatGPT 的用户查询。
 
 User-agent: ClaudeBot
 Disallow: /
-# 说明：ClaudeBot 由 Anthropic 运营，用于 Claude AI 模型的数据收集。阻止它以确保内容不被用于训练 Anthropic 的语言模型。
+# 说明：ClaudeBot 由 Anthropic 运营，用于 Claude AI 模型的数据收集。
 
 User-agent: Diffbot
 Disallow: /
-# 说明：Diffbot 是一个数据提取爬虫，用于 AI 驱动的内容分析和结构化数据抓取。阻止它以防止内容被用于其数据集。
+# 说明：Diffbot 是一个数据提取爬虫，用于 AI 驱动的内容分析和结构化数据抓取。
 
 User-agent: DuckAssistBot
 Disallow: /
-# 说明：DuckAssistBot 由 DuckDuckGo 运营，用于其 AI 驱动的助理功能。阻止它以防止内容被用于 DuckDuckGo 的 AI 回答。
+# 说明：DuckAssistBot 由 DuckDuckGo 运营，用于其 AI 驱动的助理功能。
 
 User-agent: FacebookBot
 Disallow: /
-# 说明：FacebookBot 由 Meta 运营，用于内容索引，可能用于 AI 或社交媒体分析。阻止它以限制 Meta 对内容的访问。
+# 说明：FacebookBot 由 Meta 运营，用于内容索引，可能用于 AI 或社交媒体分析。
 
 User-agent: FriendlyCrawler
 Disallow: /
-# 说明：FriendlyCrawler 由 Friendly 运营，用于社交媒体监控，可能用于 AI 分析。阻止它以防止未经授权的数据收集。
+# 说明：FriendlyCrawler 由 Friendly 运营，用于社交媒体监控，可能用于 AI 分析。
 
 User-agent: Google-Extended
 Disallow: /
-# 说明：Google-Extended 是谷歌的 AI 数据收集爬虫，与 Googlebot 分开，用于 AI 模型（如 Gemini）。阻止它以防止内容被用于谷歌的 AI 训练。
+# 说明：Google-Extended 是谷歌的 AI 数据收集爬虫，与 Googlebot 分开，用于 AI 模型（如 Gemini）。
 
 User-agent: GPTBot
 Disallow: /
-# 说明：GPTBot 由 OpenAI 运营，用于 ChatGPT 等 AI 模型的数据收集。阻止它以确保内容不被用于 OpenAI 的训练数据集。
+# 说明：GPTBot 由 OpenAI 运营，用于 ChatGPT 等 AI 模型的数据收集。
 
 User-agent: iaskspider/2.0
 Disallow: /
-# 说明：iaskspider/2.0 是中国 iAsk 搜索引擎的爬虫，可能用于 AI 或内容聚合。阻止它以防止未经授权的内容使用。
+# 说明：iaskspider/2.0 是中国 iAsk 搜索引擎的爬虫，可能用于 AI 或内容聚合。
 
 User-agent: ICC-Crawler
 Disallow: /
-# 说明：ICC-Crawler 可能与 Internet Content Classification 项目相关，用于 AI 研究。阻止它以防止内容被用于此类项目。
+# 说明：ICC-Crawler 可能与 Internet Content Classification 项目相关，用于 AI 研究。
 
 User-agent: img2dataset
 Disallow: /
-# 说明：img2dataset 是一个图像收集爬虫，用于创建 AI 训练的计算机视觉数据集。阻止它以保护网站图片不被抓取。
+# 说明：img2dataset 是一个图像收集爬虫，用于创建 AI 训练的计算机视觉数据集。
 
 User-agent: Kangaroo Bot
 Disallow: /
-# 说明：Kangaroo Bot 是一个不太知名的爬虫，可能用于数据收集或 AI 研究。阻止它以防未经授权的抓取。
+# 说明：Kangaroo Bot 是一个不太知名的爬虫，可能用于数据收集或 AI 研究。
 
 User-agent: LinerBot
 Disallow: /
-# 说明：LinerBot 由 Liner 运营，用于网页高亮和注释，可能用于 AI 内容分析。阻止它以防止数据提取。
+# 说明：LinerBot 由 Liner 运营，用于网页高亮和注释，可能用于 AI 内容分析。
 
 User-agent: MachineLearningForPeaceBot
 Disallow: /
-# 说明：MachineLearningForPeaceBot 可能与 AI 社会公益研究相关。阻止它以防止内容被用于其数据集。
+# 说明：MachineLearningForPeaceBot 可能与 AI 社会公益研究相关。
 
 User-agent: Meltwater
 Disallow: /
-# 说明：Meltwater 是一个媒体监控和分析平台，爬虫可能用于 AI 驱动的洞察。阻止它以限制内容的商业使用。
+# 说明：Meltwater 是一个媒体监控和分析平台，爬虫可能用于 AI 驱动的洞察。
 
 User-agent: meta-externalagent
 Disallow: /
-# 说明：meta-externalagent 是 Meta 的爬虫，用于外部数据收集，可能用于 AI 或社交媒体。阻止它以防止 Meta 抓取内容。
+# 说明：meta-externalagent 是 Meta 的爬虫，用于外部数据收集，可能用于 AI 或社交媒体。
 
 User-agent: meta-externalfetcher
 Disallow: /
-# 说明：meta-externalfetcher 是 Meta 的另一个爬虫，可能用于 AI 模型的数据获取。阻止它以确保内容不被 Meta 的 AI 系统使用。
+# 说明：meta-externalfetcher 是 Meta 的另一个爬虫，可能用于 AI 模型的数据获取。
 
 User-agent: Nicecrawler
 Disallow: /
-# 说明：Nicecrawler 是一个不太知名的爬虫，可能用于数据聚合或研究。阻止它以防未经授权的访问。
+# 说明：Nicecrawler 是一个不太知名的爬虫，可能用于数据聚合或研究。
 
 User-agent: OAI-SearchBot
 Disallow: /
-# 说明：OAI-SearchBot 由 OpenAI 运营，可能用于搜索或 AI 数据收集。阻止它以防止 OpenAI 使用你的内容。
+# 说明：OAI-SearchBot 由 OpenAI 运营，可能用于搜索或 AI 数据收集。
 
 User-agent: omgili
 Disallow: /
-# 说明：omgili 是一个论坛和社交媒体爬虫，可能用于 AI 驱动的情感分析。阻止它以防止未经授权的数据提取。
+# 说明：omgili 是一个论坛和社交媒体爬虫，可能用于 AI 驱动的情感分析。
 
 User-agent: omgilibot
 Disallow: /
-# 说明：omgilibot 是 omgili 的变体，用于类似目的。阻止它以确保内容不被用于 AI 或分析。
+# 说明：omgilibot 是 omgili 的变体，用于类似目的。
 
 User-agent: PanguBot
 Disallow: /
-# 说明：PanguBot 由阿里巴巴运营，可能用于 AI 或搜索服务。阻止它以防止内容被用于阿里巴巴的 AI 生态。
+# 说明：PanguBot 由阿里巴巴运营，可能用于 AI 或搜索服务。
 
 User-agent: PerplexityBot
 Disallow: /
-# 说明：PerplexityBot 由 Perplexity AI 运营，用于 AI 驱动的搜索和回答引擎。阻止它以防止内容被用于其 AI 回答。
+# 说明：PerplexityBot 由 Perplexity AI 运营，用于 AI 驱动的搜索和回答引擎。
 
 User-agent: Perplexity-User
 Disallow: /
-# 说明：Perplexity-User 表示通过 Perplexity AI 的用户查询。阻止它以确保内容不被 Perplexity 的 AI 访问。
+# 说明：Perplexity-User 表示通过 Perplexity AI 的用户查询。
 
 User-agent: PetalBot
 Disallow: /
-# 说明：PetalBot 是华为的 Petal 搜索引擎爬虫，可能用于 AI 驱动的索引。阻止它以防止华为使用你的内容。
+# 说明：PetalBot 是华为的 Petal 搜索引擎爬虫，可能用于 AI 驱动的索引。
 
 User-agent: PiplBot
 Disallow: /
-# 说明：PiplBot 由 Pipl 运营，用于人物搜索和数据聚合，可能用于 AI 分析。阻止它以防止数据提取。
+# 说明：PiplBot 由 Pipl 运营，用于人物搜索和数据聚合，可能用于 AI 分析。
 
 User-agent: QualifiedBot
 Disallow: /
-# 说明：QualifiedBot 由 Qualified 运营，是一个招聘平台，可能用于 AI 驱动的候选人分析。阻止它以限制内容访问。
+# 说明：QualifiedBot 由 Qualified 运营，是一个招聘平台，可能用于 AI 驱动的候选人分析。
 
 User-agent: Scoop.it
 Disallow: /
-# 说明：Scoop.it 是一个内容策展平台，爬虫用于内容聚合，可能用于 AI 推荐。阻止它以防止未经授权的使用。
+# 说明：Scoop.it 是一个内容策展平台，爬虫用于内容聚合，可能用于 AI 推荐。
 
 User-agent: Seekr
 Disallow: /
-# 说明：Seekr 是一个 AI 驱动的内容分析平台爬虫。阻止它以防止内容被用于其 AI 系统。
+# 说明：Seekr 是一个 AI 驱动的内容分析平台爬虫。
 
 User-agent: SemrushBot-OCOB
 Disallow: /
-# 说明：SemrushBot-OCOB 是 Semrush 的爬虫，用于站外内容优化，可能用于 AI 驱动的 SEO 分析。阻止它以限制商业数据使用。
+# 说明：SemrushBot-OCOB 是 Semrush 的爬虫，用于站外内容优化，可能用于 AI 驱动的 SEO 分析。
 
 User-agent: Sidetrade indexer bot
 Disallow: /
-# 说明：Sidetrade indexer bot 由 Sidetrade 运营，是 B2B 销售平台，可能用于 AI 驱动的潜在客户生成。阻止它以防止数据提取。
+# 说明：Sidetrade indexer bot 由 Sidetrade 运营，是 B2B 销售平台，可能用于 AI 驱动的潜在客户生成。
 
 User-agent: Timpibot
 Disallow: /
-# 说明：Timpibot 是一个不太知名的爬虫，可能用于 AI 或研究目的。阻止它以防未经授权的抓取。
+# 说明：Timpibot 是一个不太知名的爬虫，可能用于 AI 或研究目的。
 
 User-agent: VelenPublicWebCrawler
 Disallow: /
-# 说明：VelenPublicWebCrawler 由 Velen 运营，可能用于数据收集或 AI 研究。阻止它以防止未经授权的访问。
+# 说明：VelenPublicWebCrawler 由 Velen 运营，可能用于数据收集或 AI 研究。
 
 User-agent: Webzio-Extended
 Disallow: /
-# 说明：Webzio-Extended 是 Webzio 的爬虫，可能用于 AI 驱动的内容聚合。阻止它以限制内容访问。
+# 说明：Webzio-Extended 是 Webzio 的爬虫，可能用于 AI 驱动的内容聚合。
 
 User-agent: YouBot
 Disallow: /
-# 说明：YouBot 由 You.com 运营，是一个 AI 驱动的搜索引擎。阻止它以防止内容被用于其 AI 回答。
+# 说明：YouBot 由 You.com 运营，是一个 AI 驱动的搜索引擎。
 
 User-agent: Baiduspider
 Disallow: /
@@ -193,6 +196,4 @@ Allow: /
 
 User-agent: bingbot
 Allow: /
-# 说明：bingbot 是必应的搜索爬虫，允许其访问以确保网站在必应搜索中被索引，解决 HTTP 400-499 错误。
-
-
+# 说明：bingbot 是必应的搜索爬虫，允许其访问以确保网站在必应搜索中被索引。
