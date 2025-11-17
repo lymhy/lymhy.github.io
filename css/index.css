@@ -1730,7 +1730,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: JetBrainsMono-Bold;
+  font-family: 抖音美好体;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   scroll-behavior: smooth;
@@ -1853,6 +1853,13 @@ a {
 }
 a:hover {
   color: #49b1f5;
+}
+#site-title,
+#site-subtitle,
+.site-name,
+#aside-content .author-info-name,
+#aside-content .author-info-description {
+  font-family: 抖音美好体;
 }
 .text-center {
   text-align: center;

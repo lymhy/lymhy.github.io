@@ -1,10 +1,26 @@
 @font-face {
   font-family: 'JetBrainsMono-Bold';
   font-display: swap;
-  src: url('https://unpkg.com/lymhy-img@1.0.1/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-Bold.woff2') format("woff2");
+  src: url('https://unpkg.com/lymhy-img@1.0.2/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-Bold.woff2') format("woff2");
 }
 @font-face {
   font-family: 'JetBrainsMono-SemiBold';
+  font-display: swap;
+  src: url('https://unpkg.com/lymhy-img@1.0.2/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-SemiBold.woff2') format("woff2");
+}
+@font-face {
+  font-family: '抖音美好体';
+  font-display: swap;
+  src: url('https://unpkg.com/lymhy-img@1.1.0/Lfont/DouYinMeiHao/DouyinSansBold.ttf') format("ttf");
+}
+/* @font-face {
+  font-family: '寒蝉全圆体';
+  font-display: swap;
+  src: url('https://fontsapi.zeoseven.com/3/main/result.css') format("normal");
+} */
+
+@font-face {
+  font-family: 'CascadiaCode';
   font-display: swap;
   src: url('https://unpkg.com/lymhy-img@1.0.1/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-SemiBold.woff2') format("woff2");
 }
