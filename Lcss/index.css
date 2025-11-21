@@ -3,15 +3,14 @@
   --light-gradient: linear-gradient(-45deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7));
   --dark-gradient: linear-gradient(-45deg, rgba(24, 40, 72, 0.7), rgba(35, 37, 58, 0.8), rgba(35, 37, 58, 0.8), rgba(24, 40, 72, 0.7));
   --light-pseudo-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7));
-  --dark-pseudo-gradient: linear-gradient(to bottom, rgba(24, 40, 72, 0.1), rgba(35, 37, 58, 0.3), rgba(35, 37, 58, 0.6), rgba(24, 40, 72, 0.7));
-  --blur: blur(8px); /* Reduced blur radius from 10px for better performance */
+  --dark-pseudo-gradient: linear-gradient(to bottom, rgba(24, 40, .1), rgba(35, 37, 58, 0.3), rgba(35, 37, 58, 0.6), rgba(24, 40, 72, 0.7));
+  --blur: blur(8px);
 }
 
 /* Apply backdrop-filter sparingly to reduce performance overhead */
 @supports (backdrop-filter: var(--blur)) {
   .backdrop-blur {
     backdrop-filter: var(--blur);
-    /* -webkit-backdrop-filter: var(--blur); 兼容性前缀，适用于一些旧版本的浏览器 (retained for compatibility, but likely unnecessary in 2025) */
   }
 }
 
@@ -21,245 +20,171 @@
   --light-pseudo-gradient: var(--dark-pseudo-gradient);
 }
 
-/* #card-newest-comments img {border-radius: 10px; /* 设置最新评论圆角半径为10px，可以根据需要调整} */
-/* Moved to a more specific selector if needed, or can be re-added if targeting specific images */
+/* ==================== 个人信息卡片完整重写（重点） ==================== */
+#aside-content > .card-widget.card-info {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: var(--light-gradient);
+  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat; /* ← 改这里 */
+  border-radius: 12px;
+  transition: box-shadow 0.4s ease;
+}
+
+/* 底层背景图（默认隐藏，悬停/点击时淡入） */
+#aside-content > .card-widget.card-info::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: -1;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+/* 桌面端悬停显示背景图 + 隐藏头像 */
+@media (hover: hover) {
+  #aside-content > .card-widget.card-info:hover::before {
+    opacity: 1;
+  }
+  #aside-content > .card-widget.card-info:hover .avatar-img {
+    opacity: 0;
+  }
+  #aside-content > .card-widget.card-info:hover {
+    /* 放大效果 */
+    /* transform: translateY(-4px);  */
+    box-shadow: 0 20px 32px rgba(0,0,0,0.15);
+  }
+}
+
+/* 移动端点击触发 */
+#aside-content > .card-widget.card-info:active::before {
+  opacity: 1;
+}
+#aside-content > .card-widget.card-info:active .avatar-img {
+  opacity: 0;
+}
+
+/* 暗黑模式背景图（可与亮模式用同一张） */
+[data-theme="dark"] #aside-content > .card-widget.card-info::before {
+  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat; /* ← 改这里，或删掉用同一张 */
+}
+
+/* 头像淡出动画（保留你原来的） */
+#aside-content div.card-widget.card-info .avatar-img {
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+/* ==================== 个人信息卡片部分结束 ==================== */
 
 /* 说说轮播 */
 #bber-talk {
   background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur class) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
 }
 
-/* 侧边栏个人信息卡片动态渐变色 */
-#aside-content > .card-widget.card-info {
+/* 侧边栏公告栏卡片渐变色 */
+#aside-content > .card-widget.card-announcement {
+  background: var(--light-gradient);
+}
+
+/* 侧边栏最新文章等卡片渐变色 */
+#aside-content > .sticky_layout > .card-widget {
+  background: var(--light-gradient);
+}
+
+/* 欢迎卡片 */
+#aside-content > .card-widget.welcomeBoxClass {
+  background: var(--light-gradient);
+}
+
+/* 公告卡片 */
+#recent-posts > #noticeList {
+  background: var(--light-gradient);
+}
+
+/* 文章页面 */
+.layout > #post {
+  background: var(--light-gradient);
+}
+
+/* 主页文章预览卡片 */
+#recent-posts .recent-post-item,
+#recent-posts > .recent-post-item {
   position: relative;
-  z-index: 1; /* 确保原内容在上层显示 */
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur class) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 侧边栏个人信息卡片动态渐变色 新增 (consolidated with above rule) */
-#aside-content > .card-widget.card-info {
-  display: block; /* 确保卡片始终显示 (removed !important by using specific selector) */
-  opacity: 1; /* 防止卡片因动画隐藏 (removed !important) */
-}
-
-/* 卡片伪元素 */
-#aside-content > .card-widget.card-info::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--light-pseudo-gradient);
-  /* url('/config/img/dog.jpg'); 鼠标悬停时显示的背景图片 */
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  transition: opacity 0.8s; /* 过渡效果持续时间 */
-  z-index: -1; /* 确保伪元素在内容下方 */
-  pointer-events: none; /* 防止伪元素拦截触摸事件 */
-  will-change: opacity; /* Optimize for animation performance */
-}
-
-/* 黑暗模式卡片 (consolidated with [data-theme="dark"] variable) */
-#aside-content > .card-widget.card-info {
+  z-index: 1;
   background: var(--light-gradient);
 }
 
-/* 黑暗模式伪元素 */
-[data-theme="dark"] #aside-content > .card-widget.card-info::before {
-  background: var(--dark-pseudo-gradient);
-  /* url('/config/img/dog.jpg'); 鼠标悬停时显示的背景图片 */
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* 头像动画 */
-#aside-content div.card-widget.card-info .avatar-img {
-  transition: opacity 0.3s ease; /* 添加渐变效果 */
-  opacity: 1; /* 默认透明度 */
-  will-change: opacity; /* Optimize for animation performance */
-}
-
-/* 桌面端悬浮效果 */
-@media (hover: hover) {
-  #aside-content div.card-widget.card-info .avatar-img:hover {
-    opacity: 0; /* 鼠标悬浮时透明 */
-  }
-  #aside-content > .card-widget.card-info:hover::before {
-    opacity: 1; /* 伪元素悬浮效果 */
-  }
-}
-
-/* 移动端触摸效果 */
-#aside-content div.card-widget.card-info .avatar-img.touched {
-  opacity: 0; /* 触摸时透明 */
-}
-
-/* 确保卡片在触摸或悬浮时可见 (simplified, removed !important) */
-#aside-content > .card-widget.card-info:hover,
-#aside-content > .card-widget.card-info.touched {
-  display: block;
-  opacity: 1;
+/* 分类、归档、标签等页面 */
+.layout > #page,
+.layout > #archive,
+.layout > #category,
+.layout > #tag {
+  background: var(--light-gradient);
 }
 
 /* 个人信息 Follow me 按钮 */
 #aside-content > .card-widget.card-info > #card-info-btn {
-  background-color: #3eb8be; /* 浅色模式默认背景色 */
+  background-color: #3eb8be;
   border-radius: 10px;
   color: #ffffff;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  will-change: transform, background-color; /* Optimize for animation performance */
+  will-change: transform, background-color;
 }
 
 /* 黑暗模式按钮 */
 [data-theme="dark"] #aside-content > .card-widget.card-info > #card-info-btn {
   background-color: #1a3a4a;
   color: #ffffff;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 /* 按钮悬浮效果 */
 #aside-content > .card-widget.card-info > #card-info-btn:hover {
   transform: scale(1.1);
-  background-color: #ff0000; /* Removed !important, specificity is sufficient */
-  color: #ffffff; /* Removed !important */
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: #ff0000;
+  color: #ffffff;
 }
 
 /* 确保子元素不干扰 */
 #aside-content > .card-widget.card-info > #card-info-btn:hover i,
 #aside-content > .card-widget.card-info > #card-info-btn:hover span {
-  background-color: transparent; /* Removed !important */
-  color: #ffffff; /* Removed !important */
+  color: #ffffff;
 }
 
-/* 按钮悬浮时强制显示卡片 (simplified, removed !important) */
-#aside-content > .card-widget.card-info > #card-info-btn:hover ~ .card-widget.card-info,
-#aside-content > .card-widget.card-info > #card-info-btn.touched ~ .card-widget.card-info {
-  display: block;
-  opacity: 1;
-}
-
-/* 侧边栏公告栏卡片渐变色 */
-#aside-content > .card-widget.card-announcement {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 侧边栏目录最新文章卡片渐变色 */
-#aside-content > .sticky_layout > .card-widget {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 侧边栏欢迎卡片渐变色 */
-#aside-content > .card-widget.welcomeBoxClass {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 公告卡片渐变色 */
-#recent-posts > #noticeList {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 文章页面 */
-.layout > #post {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 主页文章预览页面 */
-#recent-posts .recent-post-item {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-#recent-posts > .recent-post-item {
-  position: relative; /* 添加 position 以确保 z-index 生效 */
-  z-index: 1; /* 提高层级，避免被覆盖 */
-  background: var(--light-gradient); /* Removed !important, specificity is sufficient */
-  /* backdrop-filter: blur(10px); (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); (handled in .backdrop-blur) */
-}
-
-/* 分类页面 */
-.layout > #page {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 时间轴页面 */
-.layout > #archive {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 分类点进去的页面 */
-.layout > #category {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 标签点进去的页面 */
-.layout > #tag {
-  background: var(--light-gradient);
-  /* backdrop-filter: blur(10px); 应用高斯模糊效果，可以根据需要调整模糊程度 (moved to .backdrop-blur) */
-  /* -webkit-backdrop-filter: blur(10px); 兼容性前缀，适用于一些旧版本的浏览器 (handled in .backdrop-blur) */
-}
-
-/* 设置黑夜的时候，社交按钮为白色 */
+/* 黑夜模式社交按钮白色 */
 [data-theme="dark"] .social-icon i {
-  color: rgba(255, 255, 255, 0.75); /* 设置为白色，调整透明度 (removed !important) */
+  color: rgba(255, 255, 255, 0.75);
 }
 
-/* 版权页 */
+/* 版权信息美化 */
 .post-copyright {
   margin: 1.5rem 0;
   padding: 1rem 1.2rem;
-  background: rgba(255, 255, 255, 0.6); /* 兼容背景色 */
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* 柔和阴影，不突兀 */
-  color: #333; /* 提高可读性 */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  color: #333;
   transition: all 0.3s ease;
   font-size: 0.95rem;
   line-height: 1.6;
-  backdrop-filter: blur(4px); /* 轻微模糊效果 (kept lower blur for performance) */
-  /* -webkit-backdrop-filter: blur(4px); (retained for compatibility) */
+  backdrop-filter: blur(4px);
 }
-
-/* 暗黑模式适配 */
 [data-theme="dark"] .post-copyright {
   background: rgba(30, 30, 30, 0.6);
   color: #ddd;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* 网站白色遮罩 */
+/* 网站白色遮罩（如果你有全局背景图） */
 #web_bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3); /* 白色遮罩，透明度 0.7 确保肉眼可见 */
-  /* z-index: 1; 确保遮罩在背景图片上方 (commented out as it may depend on your layout) */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
 }
 
 /* Layout adjustments */
