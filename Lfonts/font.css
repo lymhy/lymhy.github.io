@@ -11,7 +11,7 @@
 @font-face {
   font-family: '抖音美好体';
   font-display: swap;
-  src: url('https://unpkg.com/lymhy-img@1.1.0/Lfont/DouYinMeiHao/DouyinSansBold.ttf') format("ttf");
+  src: url('https://unpkg.com/lymhy-img@1.1.0/Lfont/DouYinMeiHao/DouyinSansBold.ttf') format("truetype");
 }
 /* @font-face {
   font-family: '寒蝉全圆体';
