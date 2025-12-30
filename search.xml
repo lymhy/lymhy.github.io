@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>openwrt的N种安装方式</title>
+      <link href="/posts/1dc5.html"/>
+      <url>/posts/1dc5.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Vmware的安装"><a href="#Vmware的安装" class="headerlink" title="Vmware的安装"></a>Vmware的安装</h2><blockquote><p>官网下载openwrt固件，固件的选择分类请看上一篇文章</p></blockquote><p>首先在官网下载StarWind V2V Converter，把下载好的openwrt系统进行转换虚拟机能使用的vmdk格式，记得选本地导入，一直本地or下一步就行。<br>接着打开VMware虚拟机：<br>具体步骤：新建虚拟机→自定义→下一步→稍后安装系统→选择Linux5.x或ubuntu→使用nat转换→一直默认→使用现有的虚拟磁盘→保持现有格式或转换任选(一旦损坏只能重新转换)<br>配置openwrt的网段</p><h3 id="输入命令"><a href="#输入命令" class="headerlink" title="输入命令"></a>输入命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/config/network</span><br></pre></td></tr></table></figure><h3 id="查看VMnatIP"><a href="#查看VMnatIP" class="headerlink" title="查看VMnatIP"></a>查看VMnatIP</h3><p>编辑→虚拟网络编辑→nat设置→记录类型为nat的ip地址</p><h3 id="启动虚拟机"><a href="#启动虚拟机" class="headerlink" title="启动虚拟机"></a>启动虚拟机</h3><p>参考配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">config interface &#x27;loopback&#x27;</span><br><span class="line">option ifname &#x27;lo&#x27;</span><br><span class="line">option proto &#x27;static&#x27;</span><br><span class="line">option ipaddr &#x27;127.0.0.1&#x27;</span><br><span class="line">option netmask &#x27;255.0.0.0&#x27;</span><br><span class="line"></span><br><span class="line">config globals &#x27;globals&#x27;</span><br><span class="line"></span><br><span class="line">config interface &#x27;lan&#x27;</span><br><span class="line">option ifname &#x27;eth0&#x27;</span><br><span class="line">option _orig_ifname &#x27;eth0&#x27;</span><br><span class="line">option _orig_bridge &#x27;true&#x27;</span><br><span class="line">option proto &#x27;static&#x27;</span><br><span class="line">option ipaddr &#x27;10.10.10.11&#x27;  # 填写创建容器时的IP</span><br><span class="line">option netmask &#x27;255.255.255.0&#x27;</span><br><span class="line">option gateway &#x27;10.10.10.1&#x27;  # 修改为你自己主路由的IP</span><br><span class="line">option dns &#x27;10.10.10.1&#x27;      # DNS 可填主路由IP 也可填公共DNS</span><br><span class="line"></span><br><span class="line">[按下键盘 Esc 键退出输入状态，英文键盘输入 :wq 回车 保存退出]</span><br></pre></td></tr></table></figure><h3 id="重启容器网络服务"><a href="#重启容器网络服务" class="headerlink" title="重启容器网络服务"></a>重启容器网络服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/network restart</span><br></pre></td></tr></table></figure><p><code>以上只能在电脑内部进行使用，无法作为旁路由，我们需要改的的网络模式为桥接，步骤如下</code></p><h2 id="旁路由模式"><a href="#旁路由模式" class="headerlink" title="旁路由模式"></a>旁路由模式</h2><p>编辑虚拟机，将虚拟机的网络模式调整为桥接，查看本机有网络权限的IP地址，记录留着用<br><code>一定关闭测通道缓解！一定关闭测通道缓解！一定关闭测通道缓解！</code><br>不然就会像笔者一样，改了各种配置，关安全软件、防火墙策略、改ip，改。。。。<br>接着开机。重新给openwrt设置网段，依次更改ip、网关、proto。重启，就能愉快的使用Openwrt网络了~</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> openwrt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>本地链接GitHub</title>
       <link href="/posts/efff.html"/>
       <url>/posts/efff.html</url>
@@ -39,9 +58,9 @@
       
         <tags>
             
-            <tag> 科普 </tag>
-            
             <tag> openwrt </tag>
+            
+            <tag> 科普 </tag>
             
         </tags>
       
@@ -374,11 +393,33 @@
     
     
     <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/Lfonts/font.css"/>
       <url>/Lfonts/font.css</url>
       
         <content type="html"><![CDATA[@font-face {  font-family: 'JetBrainsMono-Bold';  font-display: swap;  src: url('https://unpkg.com/lymhy-img@1.1.3/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-Bold.woff2') format("woff2");}@font-face {  font-family: 'JetBrainsMono-SemiBold';  font-display: swap;  src: url('https://unpkg.com/lymhy-img@1.1.3/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-SemiBold.woff2') format("woff2");}@font-face {  font-family: '抖音美好体';  font-display: swap;  src: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.3/Lfont/DouYinMeiHao/DouyinSansBold.ttf') format("truetype");}@font-face {  font-family: 'Noto Sans';  font-display: swap;  src: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.3/Lfont/NotoSans/Noto Sans_main_go-1_fonts.zeoseven.com.woff2') format("woff2");}/* @font-face {  font-family: '寒蝉全圆体';  font-display: swap;  src: url('https://fontsapi.zeoseven.com/3/main/result.css') format("normal");} */@font-face {  font-family: 'CascadiaCode';  font-display: swap;  src: url('https://unpkg.com/lymhy-img@1.1.3/Lfont/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-SemiBold.woff2') format("woff2");}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -399,28 +440,6 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
