@@ -58,9 +58,9 @@
       
         <tags>
             
-            <tag> openwrt </tag>
-            
             <tag> 科普 </tag>
+            
+            <tag> openwrt </tag>
             
         </tags>
       
@@ -282,7 +282,7 @@
       <link href="/posts/e2d1.html"/>
       <url>/posts/e2d1.html</url>
       
-        <content type="html"><![CDATA[<h2 id="下载并安装-Node-js"><a href="#下载并安装-Node-js" class="headerlink" title="下载并安装 Node.js"></a>下载并安装 Node.js</h2><p>首先从官网下载 <a href="https://nodejs.org/zh-cn">Node.js</a> 安装包。<br>由于系统会默认将本地仓库放在 C 盘，在修改过程中经常忘记文件位置，为了管理方便，需要更改 npm 的全局目录 <code>node_global</code> 和 npm 缓存文件夹 <code>node_cache</code>。<br>如果没有设置全局目录 <code>node_global</code>，那么全局安装的文件将会保存到：<code>C:\Users\自己的计算机名\AppData\Roaming\npm</code></p><hr><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ol><li><p>在 Node.js 安装位置（如 <code>C:\Program Files\nodejs</code>）创建 <code>node_global</code> 和 <code>node_cache</code> 文件夹。</p></li><li><p>设置缓存目录和全局目录：<br>以管理员身份运行 <code>cmd</code>，执行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> cache %USERPROFILE%\npm-cache --global</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix %USERPROFILE%\npm-global --global</span><br></pre></td></tr></table></figure></li><li><p>创建 <code>NODE_HOME</code> 变量：<br>在 <strong>计算机管理 → 属性 → 高级系统设置 → 环境变量</strong>，系统变量里新建变量名 <code>NODE_HOME</code>，变量值设为 Node.js 安装的绝对路径。</p></li><li><p>找到 <code>Path</code>，删除原 Node.js 的环境变量，替换成：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%</span><br></pre></td></tr></table></figure></li><li><p>添加新环境变量：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%\node_global</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%\node_cache</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="部分电脑因安全策略导致-npm-无法使用的解决方案"><a href="#部分电脑因安全策略导致-npm-无法使用的解决方案" class="headerlink" title="部分电脑因安全策略导致 npm 无法使用的解决方案"></a>部分电脑因安全策略导致 npm 无法使用的解决方案</h2><h3 id="手动修改-C-Program-Files-nodejs-node-global-和-node-cache-目录权限"><a href="#手动修改-C-Program-Files-nodejs-node-global-和-node-cache-目录权限" class="headerlink" title="手动修改 C:\Program Files\nodejs\node_global 和 node_cache 目录权限"></a>手动修改 <code>C:\Program Files\nodejs\node_global</code> 和 <code>node_cache</code> 目录权限</h3><ol><li>进入 <code>C:\Program Files\nodejs\</code></li><li><strong>右键 → “属性” → “安全”</strong></li><li>选择你的用户，并点击 <strong>“编辑权限”</strong></li><li>选中 <strong>“完全控制”</strong> 并 <strong>“应用”</strong></li></ol><h3 id="更换nodejs安装位置"><a href="#更换nodejs安装位置" class="headerlink" title="更换nodejs安装位置"></a>更换nodejs安装位置</h3><hr><h2 id="安装-npm-后可能产生的错误"><a href="#安装-npm-后可能产生的错误" class="headerlink" title="安装 npm 后可能产生的错误"></a>安装 npm 后可能产生的错误</h2><h3 id="尝试手动更新依赖"><a href="#尝试手动更新依赖" class="headerlink" title="尝试手动更新依赖"></a>尝试手动更新依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update</span><br></pre></td></tr></table></figure><h3 id="如何查看具体漏洞？"><a href="#如何查看具体漏洞？" class="headerlink" title="如何查看具体漏洞？"></a>如何查看具体漏洞？</h3><p>运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm audit</span><br></pre></td></tr></table></figure><h3 id="修复-npm-audit-报告的中等严重性漏洞"><a href="#修复-npm-audit-报告的中等严重性漏洞" class="headerlink" title="修复 npm audit 报告的中等严重性漏洞"></a>修复 npm audit 报告的中等严重性漏洞</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm audit fix</span><br></pre></td></tr></table></figure><h3 id="最终解决方法：删除并重新安装依赖"><a href="#最终解决方法：删除并重新安装依赖" class="headerlink" title="最终解决方法：删除并重新安装依赖"></a>最终解决方法：删除并重新安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> package-lock.json</span><br><span class="line"><span class="built_in">rm</span> -rf node_modules</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="下载并安装-Node-js"><a href="#下载并安装-Node-js" class="headerlink" title="下载并安装 Node.js"></a>下载并安装 Node.js</h2><p>首先从官网下载 <a href="https://nodejs.org/zh-cn">Node.js</a> 安装包。<br>由于系统会默认将本地仓库放在 C 盘，在修改过程中经常忘记文件位置，为了管理方便，需要更改 npm 的全局目录 <code>node_global</code> 和 npm 缓存文件夹 <code>node_cache</code>。<br>如果没有设置全局目录 <code>node_global</code>，那么全局安装的文件将会保存到：<code>C:\Users\自己的计算机名\AppData\Roaming\npm</code></p><hr><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ol><li><p>在 Node.js 安装位置（如 <code>C:\Program Files\nodejs</code>）创建 <code>node_global</code> 和 <code>node_cache</code> 文件夹。</p></li><li><p>设置缓存目录和全局目录：<br>以管理员身份运行 <code>cmd</code>，执行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> cache [%USERPROFILE%\npm_cache] --global</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix [%USERPROFILE%\npm_global] --global</span><br></pre></td></tr></table></figure></li><li><p>创建 <code>NODE_HOME</code> 变量：<br>在 <strong>计算机管理 → 属性 → 高级系统设置 → 环境变量</strong>，系统变量里新建变量名 <code>NODE_HOME</code>，变量值设为 Node.js 安装的绝对路径。</p></li><li><p>找到 <code>Path</code>，删除原 Node.js 的环境变量，替换成：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%</span><br></pre></td></tr></table></figure></li><li><p>添加新环境变量：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%\node_global</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%\node_cache</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="部分电脑因安全策略导致-npm-无法使用的解决方案"><a href="#部分电脑因安全策略导致-npm-无法使用的解决方案" class="headerlink" title="部分电脑因安全策略导致 npm 无法使用的解决方案"></a>部分电脑因安全策略导致 npm 无法使用的解决方案</h2><h3 id="手动修改-C-Program-Files-nodejs-node-global-和-node-cache-目录权限"><a href="#手动修改-C-Program-Files-nodejs-node-global-和-node-cache-目录权限" class="headerlink" title="手动修改 C:\Program Files\nodejs\node_global 和 node_cache 目录权限"></a>手动修改 <code>C:\Program Files\nodejs\node_global</code> 和 <code>node_cache</code> 目录权限</h3><ol><li>进入 <code>C:\Program Files\nodejs\</code></li><li><strong>右键 → “属性” → “安全”</strong></li><li>选择你的用户，并点击 <strong>“编辑权限”</strong></li><li>选中 <strong>“完全控制”</strong> 并 <strong>“应用”</strong></li></ol><h3 id="更换nodejs安装位置"><a href="#更换nodejs安装位置" class="headerlink" title="更换nodejs安装位置"></a>更换nodejs安装位置</h3><hr><h2 id="安装-npm-后可能产生的错误"><a href="#安装-npm-后可能产生的错误" class="headerlink" title="安装 npm 后可能产生的错误"></a>安装 npm 后可能产生的错误</h2><h3 id="尝试手动更新依赖"><a href="#尝试手动更新依赖" class="headerlink" title="尝试手动更新依赖"></a>尝试手动更新依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update</span><br></pre></td></tr></table></figure><h3 id="如何查看具体漏洞？"><a href="#如何查看具体漏洞？" class="headerlink" title="如何查看具体漏洞？"></a>如何查看具体漏洞？</h3><p>运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm audit</span><br></pre></td></tr></table></figure><h3 id="修复-npm-audit-报告的中等严重性漏洞"><a href="#修复-npm-audit-报告的中等严重性漏洞" class="headerlink" title="修复 npm audit 报告的中等严重性漏洞"></a>修复 npm audit 报告的中等严重性漏洞</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm audit fix</span><br></pre></td></tr></table></figure><h3 id="最终解决方法：删除并重新安装依赖"><a href="#最终解决方法：删除并重新安装依赖" class="headerlink" title="最终解决方法：删除并重新安装依赖"></a>最终解决方法：删除并重新安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> package-lock.json</span><br><span class="line"><span class="built_in">rm</span> -rf node_modules</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -393,17 +393,6 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/Lfonts/font.css"/>
       <url>/Lfonts/font.css</url>
@@ -415,9 +404,20 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="📬-如何申请友链"><a href="#📬-如何申请友链" class="headerlink" title="📬 如何申请友链"></a>📬 如何申请友链</h2><p>如果你也想加入我的友链，请留言或通过以下格式提交信息：</p><ul><li><strong>站点名称</strong>：</li><li><strong>站点地址</strong>：</li><li><strong>站点头像</strong>（建议 1:1 尺寸）：</li><li><strong>站点描述</strong>（20 字以内）：</li></ul><p><strong>要求</strong>：</p><ul><li>内容原创，更新稳定；</li><li>页面设计整洁，无违法违规内容；</li><li>互加友链，长期有效。</li></ul><hr><p>如果你喜欢这个页面的设计，欢迎点赞、留言或 Fork 参考，愿我们在博客路上越走越远！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -437,9 +437,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/Lfix/bg/bg.css"/>
+      <url>/Lfix/bg/bg.css</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -448,9 +448,9 @@
     
     
     <entry>
-      <title></title>
-      <link href="/Lfix/bg/bg.css"/>
-      <url>/Lfix/bg/bg.css</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
