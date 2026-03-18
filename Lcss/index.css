@@ -21,22 +21,73 @@
 }
 
 /* ==================== 个人信息卡片完整重写（重点） ==================== */
+/* 作者卡片基础样式 */
 #aside-content > .card-widget.card-info {
   position: relative;
   overflow: hidden;
   z-index: 1;
   background: var(--light-gradient);
-  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat; /* ← 改这里 */
+  /* background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat; */
   border-radius: 12px;
   transition: box-shadow 0.4s ease;
 }
 
-/* 底层背景图（默认隐藏，悬停/点击时淡入） */
+/* 作者信息详情 - 底部滑动条 */
+#aside-content .card-info .author-info-detail {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(100% - 40px);
+  height: 34px;
+  position: absolute;
+  bottom: 10px; /* 改为底部定位 */
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  font-size: 14px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  
+  /* 默认状态 - 缩小的版本 */
+  width: 60px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  
+  /* 过渡效果 */
+  transition: width 0.5s ease-in-out, 
+              height 0.5s ease-in-out, 
+              border-radius 0.5s ease-in-out, 
+              padding 0.5s ease-in-out, 
+              background 0.5s ease-in-out,
+              opacity 0.3s ease;
+  
+  /* 文字样式 */
+  color: var(--font-color);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* 详情条悬停/展开效果 */
+#aside-content .card-info .author-info-detail:hover {
+  width: calc(100% - 40px);
+  height: 34px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 底层背景图（默认隐藏） */
 #aside-content > .card-widget.card-info::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat;
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: -1;
@@ -44,38 +95,66 @@
   will-change: opacity;
 }
 
-/* 桌面端悬停显示背景图 + 隐藏头像 */
+/* 头像淡出动画 */
+#aside-content div.card-widget.card-info .avatar-img {
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  z-index: 3;
+  position: relative;
+}
+
+/* 桌面端悬停效果 */
 @media (hover: hover) {
+  /* 悬停时显示背景图 */
   #aside-content > .card-widget.card-info:hover::before {
     opacity: 1;
   }
-  #aside-content > .card-widget.card-info:hover .avatar-img {
+  
+  /* 悬停时隐藏头像 */
+  /* #aside-content > .card-widget.card-info:hover .avatar-img {
     opacity: 0;
-  }
+  } */
+  
+  /* 悬停时盒子阴影效果 */
   #aside-content > .card-widget.card-info:hover {
-    /* 放大效果 */
-    /* transform: translateY(-4px);  */
     box-shadow: 0 20px 32px rgba(0,0,0,0.15);
+  }
+  
+  /* 悬停时详情条自动展开 */
+  #aside-content > .card-widget.card-info:hover .author-info-detail {
+    width: calc(100% - 40px);
   }
 }
 
 /* 移动端点击触发 */
-#aside-content > .card-widget.card-info:active::before {
-  opacity: 1;
-}
-#aside-content > .card-widget.card-info:active .avatar-img {
-  opacity: 0;
+@media (hover: none) {
+  #aside-content > .card-widget.card-info:active::before {
+    opacity: 1;
+  }
+  #aside-content > .card-widget.card-info:active .avatar-img {
+    opacity: 0;
+  }
+  #aside-content > .card-widget.card-info:active .author-info-detail {
+    width: calc(100% - 40px);
+  }
 }
 
-/* 暗黑模式背景图（可与亮模式用同一张） */
+/* 暗黑模式背景图 */
 [data-theme="dark"] #aside-content > .card-widget.card-info::before {
-  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat; /* ← 改这里，或删掉用同一张 */
+  background: url('https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png') center/cover no-repeat;
+  opacity: 0; /* 保持初始隐藏 */
 }
 
-/* 头像淡出动画（保留你原来的） */
-#aside-content div.card-widget.card-info .avatar-img {
-  transition: opacity 0.3s ease;
-  will-change: opacity;
+/* 详情条内部文字样式 */
+#aside-content .card-info .author-info-detail .detail-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* 如果要在详情条显示图标和数字 */
+#aside-content .card-info .author-info-detail i {
+  margin-right: 5px;
+  font-size: 14px;
 }
 /* ==================== 个人信息卡片部分结束 ==================== */
 
