@@ -1,0 +1,802 @@
+/* 优化版：保留原视觉方向，重点收敛重复规则、降低维护成本，并修复明显语法问题 */
+:root {
+  --glass-gradient-light: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.7)
+  );
+  --glass-gradient-dark: linear-gradient(
+    -45deg,
+    rgba(24, 40, 72, 0.7),
+    rgba(35, 37, 58, 0.8),
+    rgba(35, 37, 58, 0.8),
+    rgba(24, 40, 72, 0.7)
+  );
+  --glass-gradient: var(--glass-gradient-light);
+  --glass-blur: blur(8px);
+  --glass-blur-soft: blur(5px);
+  --glass-blur-strong: blur(10px);
+  --glass-blur-xs: blur(4px);
+  --card-radius: 12px;
+  --panel-radius: 32px;
+  --panel-radius-mobile: 24px;
+  --chip-radius: 999px;
+  --author-card-shadow-hover: 0 20px 32px rgba(0, 0, 0, 0.15);
+  --surface-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --author-card-image: url("https://cdn.jsdelivr.net/npm/lymhy-img@1.1.2/Limg/main/eva.png");
+}
+
+[data-theme="dark"] {
+  --glass-gradient: var(--glass-gradient-dark);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .backdrop-blur {
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+  }
+}
+
+/* ==================== 通用玻璃卡片背景 ==================== */
+:is(
+  #bber-talk,
+  #aside-content > .card-widget.card-announcement,
+  #aside-content > .sticky_layout > .card-widget,
+  #aside-content > .card-widget.welcomeBoxClass,
+  #recent-posts > #noticeList,
+  .layout > #post,
+  #recent-posts .recent-post-item,
+  #recent-posts > .recent-post-item,
+  .layout > #page,
+  .layout > #archive,
+  .layout > #category,
+  .layout > #tag
+) {
+  background: var(--glass-gradient);
+}
+
+#recent-posts .recent-post-item,
+#recent-posts > .recent-post-item {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== 个人信息卡片 ==================== */
+#aside-content > .card-widget.card-info {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: var(--glass-gradient);
+  border-radius: var(--card-radius);
+  transition: box-shadow 0.4s ease;
+}
+
+#aside-content > .card-widget.card-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--author-card-image) center/cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#aside-content div.card-widget.card-info .avatar-img {
+  position: relative;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+#aside-content .card-info .author-info-detail {
+  --detail-expanded-width: calc(100% - 40px);
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 60px;
+  max-width: var(--detail-expanded-width);
+  height: 34px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--font-color);
+  font-size: 14px;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 2;
+  transition:
+    width 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out,
+    opacity 0.3s ease;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  #aside-content .card-info .author-info-detail {
+    -webkit-backdrop-filter: var(--glass-blur-soft);
+    backdrop-filter: var(--glass-blur-soft);
+  }
+}
+
+#aside-content .card-info .author-info-detail:hover {
+  width: var(--detail-expanded-width);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--surface-shadow-soft);
+}
+
+#aside-content .card-info .author-info-detail .detail-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+#aside-content .card-info .author-info-detail i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+@media (hover: hover) {
+  #aside-content > .card-widget.card-info:hover::before {
+    opacity: 1;
+  }
+
+  #aside-content > .card-widget.card-info:hover {
+    box-shadow: var(--author-card-shadow-hover);
+  }
+
+  #aside-content > .card-widget.card-info:hover .author-info-detail {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (hover: none) {
+  #aside-content > .card-widget.card-info:active::before {
+    opacity: 1;
+  }
+
+  #aside-content > .card-widget.card-info:active .avatar-img {
+    opacity: 0;
+  }
+
+  #aside-content > .card-widget.card-info:active .author-info-detail {
+    width: calc(100% - 40px);
+  }
+}
+
+/* 个人信息 Follow me 按钮 */
+#aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #3eb8be;
+  border-radius: 10px;
+  color: #ffffff;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#aside-content > .card-widget.card-info > #card-info-btn:hover {
+  transform: translateY(-1px) scale(1.05);
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+#aside-content > .card-widget.card-info > #card-info-btn:hover i,
+#aside-content > .card-widget.card-info > #card-info-btn:hover span {
+  color: #ffffff;
+}
+
+[data-theme="dark"] #aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #1a3a4a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .social-icon i {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ==================== 单页统一设计系统 ==================== */
+:is(.about-engineering, .book-page, .equipment-page, .link-guide) {
+  --page-text: var(--text-color);
+  --page-subtle: var(--second-text-color);
+  --page-surface: var(--card-bg);
+  --page-border: var(--border-color);
+  --page-shadow: 0 18px 40px -24px rgba(15, 23, 42, 0.28);
+  --page-card-shadow: 0 14px 30px -24px rgba(15, 23, 42, 0.18);
+  max-width: 1020px !important;
+  margin: 0 auto !important;
+  color: var(--page-text);
+}
+
+:is(.about-engineering, .equipment-page, .link-guide) {
+  --page-accent: var(--theme-color);
+  --page-accent-rgb: 66, 90, 239;
+}
+
+.book-page {
+  --page-accent: #b7742f;
+  --page-accent-rgb: 183, 116, 47;
+}
+
+:is(.about-engineering, .book-page, .equipment-page, .link-guide) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:is(
+  .about-engineering .about-hero,
+  .book-page .library-hero,
+  .equipment-page .hero-panel,
+  .link-guide .link-panel
+) {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 2.4rem !important;
+  border: 1px solid var(--page-border) !important;
+  border-radius: var(--panel-radius) !important;
+  background:
+    radial-gradient(circle at top right, rgba(var(--page-accent-rgb), 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.28)) !important;
+  box-shadow: var(--page-shadow) !important;
+}
+
+[data-theme="dark"] :is(
+  .about-engineering .about-hero,
+  .book-page .library-hero,
+  .equipment-page .hero-panel,
+  .link-guide .link-panel
+) {
+  background:
+    radial-gradient(circle at top right, rgba(var(--page-accent-rgb), 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(18, 24, 38, 0.82), rgba(18, 24, 38, 0.48)) !important;
+  box-shadow: 0 20px 42px -28px rgba(2, 6, 23, 0.72) !important;
+}
+
+:is(
+  .about-engineering .about-panel,
+  .about-engineering .site-hub,
+  .book-page .book-section,
+  .equipment-page .equipment-section,
+  .link-guide .link-section
+) {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 1.8rem !important;
+  border: 1px solid var(--page-border) !important;
+  border-radius: var(--panel-radius) !important;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.18)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72)) !important;
+  box-shadow: var(--page-shadow) !important;
+  scroll-margin-top: 88px;
+}
+
+[data-theme="dark"] :is(
+  .about-engineering .about-panel,
+  .about-engineering .site-hub,
+  .book-page .book-section,
+  .equipment-page .equipment-section,
+  .link-guide .link-section
+) {
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(145deg, rgba(21, 27, 33, 0.92), rgba(19, 19, 19, 0.78)) !important;
+}
+
+.about-engineering .about-panel::after,
+.about-engineering .site-hub::after,
+.book-page .book-section::after,
+.equipment-page .equipment-section::after,
+.link-guide .link-section::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 1.8rem !important;
+  right: 1.8rem !important;
+  top: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(var(--page-accent-rgb), 0.16) 18%,
+    rgba(var(--page-accent-rgb), 0.05) 48%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  opacity: 0.72 !important;
+  pointer-events: none !important;
+}
+
+[data-theme="dark"] .about-engineering .about-panel::after,
+[data-theme="dark"] .about-engineering .site-hub::after,
+[data-theme="dark"] .book-page .book-section::after,
+[data-theme="dark"] .equipment-page .equipment-section::after,
+[data-theme="dark"] .link-guide .link-section::after {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.12) 18%,
+    rgba(255, 255, 255, 0.03) 52%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  opacity: 0.48 !important;
+}
+
+:is(
+  .about-engineering .hero-kicker,
+  .about-engineering .section-kicker,
+  .book-page .hero-eyebrow,
+  .book-page .section-kicker,
+  .equipment-page .hero-eyebrow,
+  .equipment-page .section-kicker,
+  .link-guide .hero-eyebrow,
+  .link-guide .section-kicker
+) {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.45rem 0.9rem !important;
+  border-radius: var(--chip-radius) !important;
+  border: 1px solid rgba(var(--page-accent-rgb), 0.18) !important;
+  background: rgba(var(--page-accent-rgb), 0.08) !important;
+  color: var(--page-accent) !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+:is(
+  .about-engineering .hero-copy h1,
+  .book-page .library-hero h1,
+  .equipment-page .hero-panel h1,
+  .link-guide .link-panel h2
+) {
+  margin: 1.1rem 0 0.9rem !important;
+  font-size: 3rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--page-text) !important;
+}
+
+:is(
+  .about-engineering .hero-lead,
+  .book-page .hero-lead,
+  .equipment-page .hero-lead,
+  .link-guide .hero-lead
+) {
+  max-width: 700px !important;
+  margin: 0 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.9 !important;
+  color: var(--page-subtle) !important;
+}
+
+:is(
+  .about-engineering .hero-actions,
+  .book-page .hero-nav,
+  .equipment-page .hero-nav,
+  .link-guide .hero-nav
+) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.8rem !important;
+  margin-top: 1.6rem !important;
+}
+
+:is(
+  .about-engineering .hero-action,
+  .book-page .hero-link,
+  .equipment-page .hero-link,
+  .link-guide .hero-link
+) {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  padding: 0.72rem 1rem !important;
+  border-radius: var(--chip-radius) !important;
+  border: 1px solid var(--page-border) !important;
+  background: var(--page-surface) !important;
+  color: var(--page-text) !important;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+:is(
+  .about-engineering .hero-action:hover,
+  .book-page .hero-link:hover,
+  .equipment-page .hero-link:hover,
+  .link-guide .hero-link:hover
+) {
+  transform: translateY(-2px) !important;
+  border-color: var(--page-accent) !important;
+  box-shadow: 0 14px 26px -20px rgba(var(--page-accent-rgb), 0.55) !important;
+}
+
+:is(
+  .about-engineering .hero-action:focus-visible,
+  .book-page .hero-link:focus-visible,
+  .equipment-page .hero-link:focus-visible,
+  .link-guide .hero-link:focus-visible
+) {
+  outline: 2px solid rgba(var(--page-accent-rgb), 0.35);
+  outline-offset: 3px;
+}
+
+.about-engineering .hero-tags,
+.link-guide .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
+}
+
+:is(
+  .about-engineering .hero-tag,
+  .about-engineering .stack-tag,
+  .link-guide .hero-tag
+) {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.38rem 0.8rem !important;
+  border-radius: var(--chip-radius) !important;
+  border: 1px solid var(--page-border) !important;
+  background: rgba(255, 255, 255, 0.32) !important;
+  color: var(--page-subtle) !important;
+  font-size: 0.82rem !important;
+}
+
+[data-theme="dark"] :is(
+  .about-engineering .hero-tag,
+  .about-engineering .stack-tag,
+  .link-guide .hero-tag
+) {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+:is(
+  .book-page .hero-stats,
+  .equipment-page .hero-stats,
+  .link-guide .hero-stats
+) {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  margin-top: 1.8rem !important;
+}
+
+:is(
+  .book-page .hero-stat,
+  .equipment-page .hero-stat,
+  .link-guide .hero-stat
+) {
+  padding: 1rem 1.1rem !important;
+  border-radius: 22px !important;
+  border: 1px solid var(--page-border) !important;
+  background: rgba(255, 255, 255, 0.54) !important;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  :is(
+    .book-page .hero-stat,
+    .equipment-page .hero-stat,
+    .link-guide .hero-stat
+  ) {
+    -webkit-backdrop-filter: var(--glass-blur-strong);
+    backdrop-filter: var(--glass-blur-strong);
+  }
+}
+
+[data-theme="dark"] :is(
+  .book-page .hero-stat,
+  .equipment-page .hero-stat,
+  .link-guide .hero-stat
+) {
+  background: rgba(19, 28, 45, 0.55) !important;
+}
+
+:is(
+  .book-page .hero-stat strong,
+  .equipment-page .hero-stat strong,
+  .link-guide .hero-stat strong
+) {
+  display: block !important;
+  margin-bottom: 0.2rem !important;
+  font-size: 1.55rem !important;
+  line-height: 1.1 !important;
+  color: var(--page-text) !important;
+}
+
+:is(
+  .book-page .hero-stat span,
+  .equipment-page .hero-stat span,
+  .link-guide .hero-stat span
+) {
+  color: var(--page-subtle) !important;
+  font-size: 0.92rem !important;
+}
+
+:is(
+  .about-engineering .section-head,
+  .book-page .section-head,
+  .equipment-page .section-head,
+  .link-guide .section-head
+) {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  margin-bottom: 1.4rem !important;
+}
+
+:is(
+  .about-engineering .section-copy,
+  .book-page .section-copy,
+  .equipment-page .section-copy,
+  .link-guide .section-copy
+) {
+  max-width: 680px !important;
+}
+
+:is(
+  .about-engineering .section-copy h2,
+  .book-page .section-copy h2,
+  .equipment-page .section-copy h2,
+  .link-guide .section-copy h2
+) {
+  margin: 0.5rem 0 0.45rem !important;
+  font-size: 2.1rem !important;
+  line-height: 1.2 !important;
+  color: var(--page-text) !important;
+}
+
+:is(
+  .about-engineering .section-copy p,
+  .book-page .section-copy p,
+  .equipment-page .section-copy p,
+  .link-guide .section-copy p
+) {
+  margin: 0 !important;
+  color: var(--page-subtle) !important;
+  line-height: 1.85 !important;
+}
+
+:is(
+  .about-engineering .section-line,
+  .book-page .section-line,
+  .equipment-page .section-line,
+  .link-guide .section-line
+) {
+  flex: 1 !important;
+  min-width: 110px !important;
+  height: 1px !important;
+  align-self: center !important;
+  background: linear-gradient(90deg, rgba(var(--page-accent-rgb), 0.28), transparent) !important;
+  opacity: 0.8 !important;
+}
+
+:is(
+  .about-engineering .profile-panel,
+  .about-engineering .terminal-panel,
+  .about-engineering .signal-card,
+  .about-engineering .capability-card,
+  .about-engineering .project-card,
+  .about-engineering .timeline-card,
+  .about-engineering .site-card,
+  .book-page .book-card,
+  .equipment-page .device-card,
+  .link-guide .link-card,
+  .link-guide .link-apply
+) {
+  border: 1px solid rgba(255, 255, 255, 0.48) !important;
+  border-radius: 26px !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.48)) !important;
+  box-shadow: var(--page-card-shadow) !important;
+}
+
+[data-theme="dark"] :is(
+  .about-engineering .profile-panel,
+  .about-engineering .terminal-panel,
+  .about-engineering .signal-card,
+  .about-engineering .capability-card,
+  .about-engineering .project-card,
+  .about-engineering .timeline-card,
+  .about-engineering .site-card,
+  .book-page .book-card,
+  .equipment-page .device-card,
+  .link-guide .link-card,
+  .link-guide .link-apply
+) {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)) !important;
+}
+
+.link-guide {
+  margin-top: 3rem;
+}
+
+.link-guide .link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.link-guide .link-card,
+.link-guide .link-apply {
+  padding: 1.35rem;
+}
+
+.link-guide .link-card h3,
+.link-guide .link-apply h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.85rem;
+  font-size: 1.08rem;
+  color: var(--page-text);
+}
+
+.link-guide .link-card p,
+.link-guide .link-note {
+  margin: 0;
+  color: var(--page-subtle);
+  line-height: 1.82;
+}
+
+.link-guide .link-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-guide .link-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--page-subtle);
+  line-height: 1.78;
+}
+
+.link-guide .link-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(var(--page-accent-rgb), 0.7);
+  transform: translateY(-50%);
+}
+
+.link-guide .link-code {
+  margin: 0;
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  border: 1px solid var(--page-border);
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--page-text);
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  white-space: pre-wrap;
+}
+
+[data-theme="dark"] .link-guide .link-code {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ==================== 版权与背景 ==================== */
+.post-copyright {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .post-copyright {
+    -webkit-backdrop-filter: var(--glass-blur-xs);
+    backdrop-filter: var(--glass-blur-xs);
+  }
+}
+
+[data-theme="dark"] .post-copyright {
+  background: rgba(30, 30, 30, 0.6);
+  color: #ddd;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+#web_bg {
+  position: relative;
+}
+
+#web_bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+/* Layout adjustments */
+.layout.hide-aside {
+  max-width: 1200px;
+}
+
+/* ==================== 响应式 ==================== */
+@media (max-width: 900px) {
+  :is(
+    .book-page .hero-stats,
+    .equipment-page .hero-stats,
+    .link-guide .hero-stats,
+    .link-guide .link-grid
+  ) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :is(
+    .about-engineering .about-hero,
+    .book-page .library-hero,
+    .equipment-page .hero-panel,
+    .link-guide .link-panel,
+    .about-engineering .about-panel,
+    .about-engineering .site-hub,
+    .book-page .book-section,
+    .equipment-page .equipment-section,
+    .link-guide .link-section
+  ) {
+    padding: 1.5rem !important;
+    border-radius: var(--panel-radius-mobile) !important;
+  }
+
+  :is(
+    .about-engineering .hero-copy h1,
+    .book-page .library-hero h1,
+    .equipment-page .hero-panel h1,
+    .link-guide .link-panel h2
+  ) {
+    font-size: 2.4rem !important;
+  }
+
+  :is(
+    .about-engineering .section-head,
+    .book-page .section-head,
+    .equipment-page .section-head,
+    .link-guide .section-head
+  ) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #aside-content > .card-widget.card-info,
+  #aside-content > .card-widget.card-info::before,
+  #aside-content div.card-widget.card-info .avatar-img,
+  #aside-content .card-info .author-info-detail,
+  #aside-content > .card-widget.card-info > #card-info-btn,
+  :is(
+    .about-engineering .hero-action,
+    .book-page .hero-link,
+    .equipment-page .hero-link,
+    .link-guide .hero-link
+  ) {
+    transition: none !important;
+  }
+}
