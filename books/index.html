@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.520690.xyz/Limg/main/avatar.webp">
 <meta property="article:published_time" content="2026-03-18T13:54:09.000Z">
-<meta property="article:modified_time" content="2026-04-23T13:51:15.514Z">
+<meta property="article:modified_time" content="2026-04-25T11:48:02.606Z">
 <meta property="article:author" content="lymhy">
 <meta property="article:tag" content="lymhy,lymhy的个人博客,lymhyblog,分享编程开发经验,学习笔记和前端技术文章,技术博客,Github">
 <meta name="twitter:card" content="summary">
@@ -152,1240 +152,577 @@
   isHighlightShrink: false,
   isToc: false,
   pageType: 'page'
-}</script><link rel="stylesheet" href="/Lcss/index.css"><link rel="stylesheet" href="/Lfonts/font.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://cdn.jsdelivr.net/npm/lymhy-img@1.0.0/Limg/main/background.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/Limg/main/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div></div></div><div class="page type-books" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">我的书单</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">我的书单</div><div class="container" id="article-container"><style>
+}</script><link rel="stylesheet" href="/Lcss/index.css"><link rel="stylesheet" href="/Lfonts/font.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://cdn.jsdelivr.net/npm/lymhy-img@1.0.0/Limg/main/background.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/Limg/main/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div></div></div><div class="page type-books" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">我的书单</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">我的书单</div><div class="container" id="article-container"><style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+  .book-page .icon {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: -0.15em;
+    flex: 0 0 auto;
+  }
   .book-page {
-    --book-accent: #b7742f;
-    --book-surface: var(--card-bg);
-    --book-text: var(--text-color);
-    --book-subtle: var(--second-text-color);
-    --book-border: var(--border-color);
-    --book-shadow: 0 26px 50px -34px rgba(36, 24, 10, 0.28);
-    max-width: 1020px;
+    --warm-bg: #fdfbf7;
+    --paper: #ffffff;
+    --accent: #d97706;
+    --accent-soft: #fef3c7;
+    --text-main: #3d342d;
+    --text-dim: #71665e;
+    --border: rgba(217, 119, 6, 0.12);
+    --shadow-soft: 0 12px 30px -10px rgba(61, 52, 45, 0.08);
+    --transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background-color 0.28s ease;
+    --hero-title: #2d241d;
+    --hero-image-filter: brightness(0.9);
+    --note-bg: #fff9db;
+    --note-text: #4b3d2b;
+    --quote-emphasis: #78350f;
+    font-family: 'Quicksand', 'Noto Serif SC', serif;
+    background-color: var(--warm-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+    opacity: 0.98;
+  }
+  [data-theme="dark"] .book-page {
+    --warm-bg: #171311;
+    --paper: #221b18;
+    --accent: #f0a23a;
+    --accent-soft: #3f2d18;
+    --text-main: #f3ebe3;
+    --text-dim: #c3b2a2;
+    --border: rgba(240, 162, 58, 0.16);
+    --shadow-soft: 0 18px 36px -18px rgba(0, 0, 0, 0.45);
+    --hero-title: #fff3e8;
+    --hero-image-filter: brightness(0.45) saturate(0.8);
+    --note-bg: #2b211b;
+    --note-text: #f3d2aa;
+    --quote-emphasis: #f6c27a;
+  }
+  .book-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .book-page .handwritten {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+  }
+  .book-page .container {
+    max-width: 1200px;
     margin: 0 auto;
-    color: var(--book-text);
+    padding: 0 2rem;
   }
-
-  .book-page a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .library-hero {
+  .book-page .hero {
     position: relative;
-    overflow: hidden;
-    padding: 2.7rem;
-    border: 1px solid var(--book-border);
-    border-radius: 36px;
-    background:
-      linear-gradient(120deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.18)),
-      radial-gradient(circle at top right, rgba(183, 116, 47, 0.2), transparent 32%),
-      linear-gradient(135deg, rgba(255, 249, 240, 0.96), rgba(249, 242, 233, 0.72));
-    box-shadow: var(--book-shadow);
-  }
-
-  [data-theme="dark"] .library-hero {
-    background:
-      linear-gradient(120deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
-      radial-gradient(circle at top right, rgba(183, 116, 47, 0.2), transparent 32%),
-      linear-gradient(135deg, rgba(34, 28, 22, 0.92), rgba(20, 20, 20, 0.68));
-  }
-
-  .library-hero::before {
-    content: "";
-    position: absolute;
-    inset: 14px;
-    border-radius: 26px;
-    border: 1px solid rgba(255, 255, 255, 0.36);
-    pointer-events: none;
-  }
-
-  [data-theme="dark"] .library-hero::before {
-    border-color: rgba(255, 255, 255, 0.08);
-  }
-
-  .library-hero::after {
-    content: "";
-    position: absolute;
-    right: -54px;
-    top: -54px;
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(183, 116, 47, 0.16), transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero-shell {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
-    gap: 1.5rem;
-    align-items: start;
-  }
-
-  .hero-copy {
-    min-width: 0;
-  }
-
-  .hero-summary {
-    position: relative;
-    isolation: isolate;
-    padding: 1.3rem;
-    border-radius: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.42);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.46));
-    backdrop-filter: blur(12px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
-    overflow: hidden;
-  }
-
-  .hero-summary > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  [data-theme="dark"] .hero-summary {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  }
-
-  .hero-summary::after {
-    content: "";
-    position: absolute;
-    inset: auto -36px -44px auto;
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(183, 116, 47, 0.14), transparent 72%);
-    pointer-events: none;
-  }
-
-  .hero-summary-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--book-accent);
-  }
-
-  .hero-summary-title {
-    display: block;
-    margin-top: 0.9rem;
-    font-size: 1.28rem;
-    line-height: 1.3;
-    letter-spacing: -0.02em;
-    color: var(--book-text);
-  }
-
-  .hero-summary-text {
-    margin: 0.75rem 0 0;
-    color: var(--book-subtle);
-    line-height: 1.85;
-    font-size: 0.95rem;
-  }
-
-  .hero-summary-points {
-    display: grid;
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  .hero-summary-point {
+    height: 90vh;
     display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    padding: 0.78rem 0.88rem;
-    border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.44);
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2rem;
   }
-
-  [data-theme="dark"] .hero-summary-point {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
+  .book-page .hero-image {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(120deg, rgba(253, 251, 247, 0.2), rgba(217, 119, 6, 0.12)),
+      url('./assets/cozy_hero.png') center/cover no-repeat;
+    z-index: -1;
+    filter: var(--hero-image-filter);
   }
-
-  .hero-summary-point i {
-    margin-top: 0.18rem;
-    color: var(--book-accent);
+  .book-page .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(75deg, var(--warm-bg) 35%, transparent 100%);
+    z-index: 0;
   }
-
-  .hero-summary-point span {
-    color: var(--book-subtle);
-    font-size: 0.92rem;
-    line-height: 1.7;
+  .book-page .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
   }
-
-  .hero-summary-strip {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(183, 116, 47, 0.12);
-  }
-
-  .hero-summary-strip span {
-    display: block;
-    font-size: 0.74rem;
+  .book-page .hero h1 {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
     font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--book-accent);
+    line-height: 1.1;
+    color: var(--hero-title);
+    margin-bottom: 1rem;
   }
-
-  .hero-summary-strip strong {
-    display: block;
-    margin-top: 0.38rem;
-    color: var(--book-text);
-    font-size: 0.98rem;
-    line-height: 1.6;
+  .book-page .hero-tagline {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
   }
-
-  .hero-eyebrow {
-    display: inline-flex;
+  .book-page .hero-p {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    border-left: 3px solid var(--accent-soft);
+    padding-left: 1.5rem;
+  }
+  .book-page .nook-bar {
+    display: flex;
+    gap: 2rem;
+    background: var(--paper);
+    padding: 1.5rem 2.5rem;
+    border-radius: 99px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    width: fit-content;
+  }
+  .book-page .nook-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dim);
+  }
+  .book-page .nook-item i {
+    color: var(--accent);
+  }
+  .book-page .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 4rem;
+    padding: 6rem 0;
+  }
+  @media (max-width: 1024px) {
+    .book-page .main-layout {
+      grid-template-columns: 1fr;
+    }
+    .book-page .sidebar {
+      order: -1;
+    }
+  }
+  .book-page .section-header {
+    margin-bottom: 3rem;
+  }
+  .book-page .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .book-page .section-header h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+  .book-page .masonry-grid {
+    columns: 2;
+    column-gap: 2rem;
+  }
+  @media (max-width: 640px) {
+    .book-page .masonry-grid {
+      columns: 1;
+    }
+  }
+  .book-page .book-card {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 2.5rem;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+  }
+  .book-page .book-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 30px -14px rgba(61, 52, 45, 0.12);
+  }
+  .book-page .bookmark {
+    position: absolute;
+    right: -10px;
+    top: 40px;
+    padding: 0.5rem 1.2rem;
+    background: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border-radius: 4px 4px 4px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .book-page .bookmark::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    border-top: 8px solid #92400e;
+    border-right: 8px solid transparent;
+  }
+  .book-page .bookmark-reading {
+    background: #0284c7;
+  }
+  .book-page .bookmark-reading::after {
+    border-top-color: #0369a1;
+  }
+  .book-page .bookmark-planned {
+    background: #7c3aed;
+  }
+  .book-page .bookmark-planned::after {
+    border-top-color: #5b21b6;
+  }
+  .book-page .book-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+  }
+  .book-page .book-author {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .book-page .book-rating {
+    display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.95rem;
-    border-radius: 999px;
-    border: 1px solid rgba(183, 116, 47, 0.18);
-    background: rgba(183, 116, 47, 0.08);
-    color: var(--book-accent);
-    font-size: 0.88rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    margin-bottom: 1.5rem;
   }
-
-  .library-hero h1 {
-    margin: 1.2rem 0 1rem;
-    font-size: 3.2rem;
-    line-height: 1.06;
-    letter-spacing: -0.04em;
-    color: var(--book-text);
+  .book-page .stars {
+    color: #fbbf24;
+    letter-spacing: 2px;
   }
-
-  .hero-lead {
-    max-width: 700px;
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.9;
-    color: var(--book-subtle);
-  }
-
-  .hero-stats {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.8rem;
-  }
-
-  .hero-stat {
-    padding: 1rem 1.1rem;
-    border-radius: 22px;
-    border: 1px solid var(--book-border);
-    background: rgba(255, 255, 255, 0.54);
-    backdrop-filter: blur(10px);
-  }
-
-  [data-theme="dark"] .hero-stat {
-    background: rgba(40, 32, 24, 0.56);
-  }
-
-  .hero-stat strong {
-    display: block;
-    margin-bottom: 0.2rem;
-    font-size: 1.55rem;
-    line-height: 1.1;
-    color: var(--book-text);
-  }
-
-  .hero-stat span {
-    color: var(--book-subtle);
-    font-size: 0.92rem;
-  }
-
-  .hero-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1.6rem;
-  }
-
-  .hero-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.82rem 1.12rem;
-    border-radius: 999px;
-    border: 1px solid var(--book-border);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56));
-    color: var(--book-text);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  }
-
-  [data-theme="dark"] .hero-link {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  }
-
-  .hero-link:hover {
-    transform: translateY(-3px);
-    border-color: var(--book-accent);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 244, 0.74));
-    box-shadow: 0 18px 30px -22px rgba(183, 116, 47, 0.52);
-  }
-
-  [data-theme="dark"] .hero-link:hover {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
-  }
-
-  .library-note {
-    margin: 1.2rem 0 0;
-    max-width: 640px;
-    color: var(--book-subtle);
-    font-size: 0.95rem;
-  }
-
-  .book-section {
-    --section-accent: var(--book-accent);
-    --section-soft: rgba(183, 116, 47, 0.12);
-    --section-glow: rgba(183, 116, 47, 0.18);
-    --section-panel-start: rgba(255, 249, 241, 0.96);
-    --section-panel-end: rgba(255, 255, 255, 0.7);
-    margin-top: 3rem;
-    padding: 1.8rem;
-    border: 1px solid var(--book-border);
-    border-radius: 34px;
-    background:
-      linear-gradient(125deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.18)),
-      linear-gradient(145deg, var(--section-panel-start), var(--section-panel-end));
-    box-shadow: var(--book-shadow);
-    scroll-margin-top: 88px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .book-section::before {
-    content: "";
-    position: absolute;
-    inset: -72px -40px auto auto;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--section-glow), transparent 68%);
-    pointer-events: none;
-  }
-
-  .book-section::after {
-    content: "";
-    position: absolute;
-    left: 1.8rem;
-    right: 1.8rem;
-    top: 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(183, 116, 47, 0.14) 16%,
-      rgba(183, 116, 47, 0.05) 46%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.72;
-    pointer-events: none;
-  }
-
-  .book-section--finished {
-    --section-accent: #b7742f;
-    --section-soft: rgba(183, 116, 47, 0.12);
-    --section-glow: rgba(183, 116, 47, 0.18);
-    --section-panel-start: rgba(255, 248, 238, 0.98);
-    --section-panel-end: rgba(255, 255, 255, 0.74);
-  }
-
-  .book-section--queue {
-    --section-accent: #4f6e86;
-    --section-soft: rgba(79, 110, 134, 0.12);
-    --section-glow: rgba(79, 110, 134, 0.2);
-    --section-panel-start: rgba(242, 247, 251, 0.98);
-    --section-panel-end: rgba(255, 255, 255, 0.72);
-  }
-
-  [data-theme="dark"] .book-section {
-    background:
-      linear-gradient(125deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
-      linear-gradient(145deg, rgba(26, 22, 18, 0.92), rgba(19, 19, 19, 0.78));
-  }
-
-  [data-theme="dark"] .book-section--queue {
-    background:
-      linear-gradient(125deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
-      linear-gradient(145deg, rgba(21, 27, 33, 0.92), rgba(19, 19, 19, 0.78));
-  }
-
-  [data-theme="dark"] .book-section::after {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.12) 18%,
-      rgba(255, 255, 255, 0.03) 52%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.48;
-  }
-
-  .section-head {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
-    align-items: end;
-    gap: 1.5rem;
-    margin-bottom: 1.6rem;
-  }
-
-  .section-copy {
-    max-width: 640px;
-  }
-
-  .section-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.42rem 0.84rem;
-    border-radius: 999px;
-    background: var(--section-soft);
-    color: var(--section-accent);
-    font-size: 0.86rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .section-copy h2 {
-    margin: 0.7rem 0 0.45rem;
-    font-size: 2.25rem;
-    line-height: 1.14;
-    letter-spacing: -0.03em;
-    color: var(--book-text);
-  }
-
-  .section-copy p {
-    margin: 0;
-    color: var(--book-subtle);
-    line-height: 1.85;
-  }
-
-  .section-line {
-    flex: 1;
-    min-width: 110px;
-    height: 1px;
-    align-self: center;
-    background: linear-gradient(
-      90deg,
-      rgba(183, 116, 47, 0.14),
-      rgba(183, 116, 47, 0.05) 32%,
-      rgba(183, 116, 47, 0.015) 58%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.6;
-  }
-
-  .section-aside {
-    position: relative;
-    min-width: 210px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.6rem;
-    padding: 1rem 1.1rem;
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.36);
-    background: rgba(255, 255, 255, 0.52);
-    backdrop-filter: blur(10px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-  }
-
-  [data-theme="dark"] .section-aside {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  }
-
-  .section-aside strong {
-    display: block;
-    font-size: 2rem;
-    line-height: 1;
-    letter-spacing: -0.05em;
-    color: var(--section-accent);
-  }
-
-  .section-aside span {
-    display: block;
-    margin-top: 0.4rem;
-    color: var(--book-subtle);
-    font-size: 0.92rem;
-    line-height: 1.7;
-  }
-
-  .book-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
-    gap: 1.25rem;
-    align-items: stretch;
-  }
-
-  .book-card {
-    position: relative;
-    display: flex;
-    gap: 1rem;
-    height: 100%;
-    min-height: 100%;
-    padding: 1.45rem;
-    border-radius: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.48);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.48));
-    box-shadow: 0 24px 40px -34px rgba(36, 24, 10, 0.28);
-    overflow: hidden;
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  [data-theme="dark"] .book-card {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-  }
-
-  .book-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255, 255, 255, 0.68);
-    box-shadow: 0 28px 44px -30px rgba(36, 24, 10, 0.34);
-  }
-
-  .book-card::before {
-    content: "";
-    position: absolute;
-    left: 1.45rem;
-    right: 1.45rem;
-    top: 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(183, 116, 47, 0.16) 12%,
-      rgba(183, 116, 47, 0.05) 42%,
-      rgba(255, 255, 255, 0) 92%
-    );
-    opacity: 0.9;
-  }
-
-  .book-card::after {
-    content: "";
-    position: absolute;
-    inset: -34px -30px auto auto;
-    width: 112px;
-    height: 112px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(183, 116, 47, 0.12), transparent 72%);
-    opacity: 0.7;
-    pointer-events: none;
-  }
-
-  [data-theme="dark"] .book-card::before {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.12) 14%,
-      rgba(255, 255, 255, 0.04) 44%,
-      rgba(255, 255, 255, 0) 92%
-    );
-    opacity: 0.55;
-  }
-
-  [data-theme="dark"] .book-card::after {
-    background: radial-gradient(circle, rgba(183, 116, 47, 0.1), transparent 74%);
-    opacity: 0.5;
-  }
-
-  .book-card--featured {
-    grid-column: 1;
-    grid-row: span 2;
-    flex-direction: column;
-    gap: 1.25rem;
-    padding: 1.7rem;
-    align-items: flex-start;
-  }
-
-  .book-icon {
-    flex: 0 0 62px;
-    width: 62px;
-    height: 62px;
-    display: grid;
-    place-items: center;
+  .book-page .book-quote {
+    background: var(--warm-bg);
+    padding: 1.25rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.54));
-    color: var(--section-accent);
-    font-size: 1.45rem;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    margin-bottom: 1.5rem;
+    position: relative;
   }
-
-  [data-theme="dark"] .book-icon {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  .book-page .book-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 3rem;
+    color: var(--accent-soft);
+    font-family: serif;
   }
-
-  .book-card--featured .book-icon {
-    flex-basis: 72px;
-    width: 72px;
-    height: 72px;
-    font-size: 1.6rem;
+  .book-page .book-desc {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
   }
-
-  .book-body {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .book-topline {
+  .book-page .book-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-bottom: 0.72rem;
-  }
-
-  .book-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.38rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-size: 0.82rem;
-    font-weight: 600;
-  }
-
-  .book-pill--finished {
-    background: rgba(183, 116, 47, 0.11);
-    border-color: rgba(183, 116, 47, 0.14);
-    color: #b7742f;
-  }
-
-  .book-pill--reading {
-    background: rgba(79, 110, 134, 0.12);
-    border-color: rgba(79, 110, 134, 0.16);
-    color: #4f6e86;
-  }
-
-  .book-pill--planned {
-    background: rgba(104, 81, 124, 0.12);
-    border-color: rgba(104, 81, 124, 0.16);
-    color: #6c557d;
-  }
-
-  .book-title {
-    margin: 0;
-    font-size: 1.38rem;
-    line-height: 1.28;
-    letter-spacing: -0.02em;
-    color: var(--book-text);
-  }
-
-  .book-card--featured .book-title {
-    font-size: 1.68rem;
-  }
-
-  .book-card--featured .book-desc {
-    max-width: 48ch;
-  }
-
-  .book-author {
-    margin-top: 0.5rem;
-    color: var(--book-subtle);
-    font-size: 0.96rem;
-  }
-
-  .book-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-top: 0.75rem;
-  }
-
-  .book-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.36rem 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.54);
-    border-radius: 999px;
-    color: var(--book-subtle);
-    font-size: 0.84rem;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.44);
-  }
-
-  [data-theme="dark"] .book-badge {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .book-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin-top: 0.95rem;
-    color: #f2b241;
-    font-size: 1rem;
-    letter-spacing: 0.14em;
-  }
-
-  .book-rating span {
-    color: var(--book-subtle);
-    font-size: 0.9rem;
-    letter-spacing: normal;
-  }
-
-  .book-desc {
-    margin: 0.9rem 0 0;
-    flex: 1;
-    color: var(--book-subtle);
-    line-height: 1.9;
-    font-size: 0.98rem;
-  }
-
-  .book-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
+    gap: 0.5rem;
     margin-top: auto;
-    padding-top: 1rem;
   }
-
-  .book-tag {
-    display: inline-flex;
+  .book-page .tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.8rem;
+    border-radius: 99px;
+  }
+  .book-page .sidebar-widget {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+  }
+  .book-page .sidebar-widget h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+  }
+  .book-page .vibe-list {
+    list-style: none;
+  }
+  .book-page .vibe-item {
+    display: flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.38rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: var(--book-subtle);
-    font-size: 0.82rem;
-    background: rgba(255, 255, 255, 0.36);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-dim);
   }
-
-  [data-theme="dark"] .book-tag {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.02);
+  .book-page .vibe-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
   }
-
-  .closing-panel {
-    margin-top: 3rem;
-    padding: 1.5rem 1.6rem;
-    border-radius: 28px;
-    border: 1px dashed rgba(201, 120, 50, 0.34);
-    background: linear-gradient(135deg, rgba(201, 120, 50, 0.07), transparent);
+  .book-page .handwritten-note {
+    transform: rotate(-2deg);
+    background: var(--note-bg);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
   }
-
-  .closing-panel h3 {
-    margin: 0 0 0.65rem;
-    font-size: 1.15rem;
-    color: var(--book-text);
+  .book-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-
-  .closing-panel p {
-    margin: 0;
-    color: var(--book-subtle);
-    line-height: 1.85;
+  .book-page .reveal.active {
+    opacity: 1;
+    transform: none;
   }
-
-  .book-divider {
-    height: 1px;
-    border: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(183, 116, 47, 0.12) 18%,
-      rgba(183, 116, 47, 0.04) 46%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    margin: 2.5rem 0 0.2rem;
-    opacity: 0.68;
-  }
-
-  @media (max-width: 900px) {
-    .library-hero {
-      padding: 2.2rem;
+  @media (hover: none), (pointer: coarse) {
+    .book-page .book-card {
+      transition: none;
     }
-
-    .hero-shell {
-      grid-template-columns: 1fr;
-    }
-
-    .library-hero h1 {
-      font-size: 2.65rem;
-    }
-
-    .hero-stats {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .section-head {
-      grid-template-columns: 1fr;
-      align-items: flex-start;
-    }
-
-    .section-aside {
-      width: 100%;
-      min-width: 0;
-    }
-
-    .book-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .book-card--featured {
-      grid-column: auto;
-      grid-row: auto;
+    .book-page .book-card:hover {
+      transform: none;
+      box-shadow: var(--shadow-soft);
     }
   }
-
-  @media (max-width: 640px) {
-    .book-page {
-      max-width: 100%;
+  @media (prefers-reduced-motion: reduce) {
+    .book-page *,
+    .book-page *::before,
+    .book-page *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
     }
-
-    .library-hero {
-      padding: 1.5rem;
-      border-radius: 24px;
-    }
-
-    .hero-summary {
-      padding: 1rem;
-      border-radius: 22px;
-    }
-
-    .hero-summary-title {
-      font-size: 1.16rem;
-    }
-
-    .hero-summary-point {
-      padding: 0.72rem 0.8rem;
-      border-radius: 16px;
-    }
-
-    .library-hero h1 {
-      font-size: 2.25rem;
-    }
-
-    .hero-lead {
-      font-size: 1rem;
-    }
-
-    .hero-stats {
-      grid-template-columns: 1fr;
-    }
-
-    .book-section {
-      padding: 1.2rem;
-      border-radius: 24px;
-    }
-
-    .section-copy h2 {
-      font-size: 1.9rem;
-    }
-
-    .section-line {
-      width: 100%;
-    }
-
-    .book-card {
-      padding: 1.15rem;
-      border-radius: 22px;
-      flex-direction: column;
-    }
-
-    .book-icon {
-      flex-basis: 52px;
-      width: 52px;
-      height: 52px;
-      font-size: 1.2rem;
-      border-radius: 14px;
-    }
-
-    .book-card--featured .book-icon {
-      flex-basis: 56px;
-      width: 56px;
-      height: 56px;
-      font-size: 1.28rem;
-    }
-
-    .book-title {
-      font-size: 1.18rem;
-    }
-
-    .book-card--featured .book-title {
-      font-size: 1.34rem;
-    }
-
-    .section-aside {
-      padding: 0.95rem 1rem;
-      border-radius: 18px;
-    }
+  }
+  .book-page .footer {
+    padding: 6rem 0;
+    text-align: center;
+    border-top: 1px dashed var(--border);
+  }
+  .book-page .footer-text {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
   }
 </style>
-
 <div class="book-page">
-<section class="library-hero">
-  <div class="hero-shell">
-    <div class="hero-copy">
-      <div class="hero-eyebrow">
-        <i class="fas fa-book-open"></i>
-        <span>Reading / Notes</span>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="book-icon-coffee" viewBox="0 0 24 24">
+      <path d="M10 2v2"></path>
+      <path d="M14 2v2"></path>
+      <path d="M7 8h9a0 0 0 0 1 0 0v5a5 5 0 0 1-5 5h0a4 4 0 0 1-4-4V8a0 0 0 0 1 0 0Z"></path>
+      <path d="M16 10h1a3 3 0 0 1 0 6h-1"></path>
+      <path d="M6 20h12"></path>
+    </symbol>
+    <symbol id="book-icon-cloud-rain" viewBox="0 0 24 24">
+      <path d="M19 16a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6-1.8A4.5 4.5 0 0 0 5 16"></path>
+      <path d="M8 16v4"></path>
+      <path d="M12 16v6"></path>
+      <path d="M16 16v4"></path>
+    </symbol>
+    <symbol id="book-icon-music" viewBox="0 0 24 24">
+      <path d="M9 18V5l10-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </symbol>
+    <symbol id="book-icon-map-pin" viewBox="0 0 24 24">
+      <path d="M12 21s-6-5.3-6-11a6 6 0 1 1 12 0c0 5.7-6 11-6 11Z"></path>
+      <circle cx="12" cy="10" r="2.5"></circle>
+    </symbol>
+    <symbol id="book-icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </symbol>
+    <symbol id="book-icon-thermometer" viewBox="0 0 24 24">
+      <path d="M14 14.76V3.5a2 2 0 1 0-4 0v11.26a4 4 0 1 0 4 0Z"></path>
+      <path d="M12 9v8"></path>
+    </symbol>
+    <symbol id="book-icon-battery" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="18" height="10" rx="2"></rect>
+      <path d="M22 11v2"></path>
+      <path d="m6 12 2-3v6l2-3"></path>
+    </symbol>
+  </svg>
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content reveal">
+        <span class="handwritten" style="color: var(--accent); margin-bottom: 1rem; display: block;">Welcome to my reading corner...</span>
+        <h1>书房记 · 我的阅读清单</h1>
+        <p class="hero-tagline">慢慢读，也认真记。</p>
+        <p class="hero-p">这是一份慢慢累积起来的阅读清单，既有已经读完后想回头再看的书，也有正在推进和准备排进下一个阶段的作品。它更像一个长期更新的阅读展柜。</p>
       </div>
-      <h1>我的书单 · 阅读记录</h1>
-      <p class="hero-lead">这是一份慢慢累积起来的阅读清单，既有已经读完后想回头再看的书，也有正在推进和准备排进下一个阶段的作品。它更像一个长期更新的阅读展柜。</p>
-      <div class="hero-nav">
-        <a class="hero-link" href="#finished">
-          <i class="fas fa-check-circle"></i>
-          <span>跳到已读</span>
-        </a>
-        <a class="hero-link" href="#queue">
-          <i class="fas fa-bookmark"></i>
-          <span>跳到在读与想读</span>
-        </a>
-      </div>
-      <p class="library-note">读书节奏不算快，但希望每一本留下来的书都能在某个时刻再次被想起。</p>
     </div>
-    <aside class="hero-summary">
-      <span class="hero-summary-label"><i class="fas fa-compass"></i> Reading Compass</span>
-      <strong class="hero-summary-title">慢慢读，也认真记。</strong>
-      <p class="hero-summary-text">比起单纯追求数量，我更在意一本书读完之后，是否还会继续留在脑子里、影响接下来一段时间的思考。</p>
-      <div class="hero-summary-points">
-        <div class="hero-summary-point">
-          <i class="fas fa-feather-alt"></i>
-          <span>偏爱既有故事感，又能让人多想一层的作品。</span>
+  </section>
+  <div class="container">
+    <div class="nook-bar reveal">
+      <div class="nook-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-coffee"></use></svg> 拿铁 / Latte</div>
+      <div class="nook-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-cloud-rain"></use></svg> 窗外细雨 / Rain</div>
+      <div class="nook-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-music"></use></svg> Jazz &amp; Lo-fi</div>
+      <div class="nook-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-map-pin"></use></svg> 温暖的窗边 / Window</div>
+    </div>
+    <main class="main-layout">
+      <div class="content-area">
+        <section id="finished" class="section-header reveal">
+          <h2>已读书籍 <span class="handwritten" style="font-size: 1.2rem; color: var(--text-dim); font-weight: 400;">(Finished)</span></h2>
+          <p>读完之后仍然愿意记住的书，通常能在情绪和思考上留下明显的余味。</p>
+        </section>
+        <div class="masonry-grid">
+          <article class="book-card reveal">
+            <div class="bookmark">已读</div>
+            <h3 class="book-title">活着</h3>
+            <p class="book-author">余华</p>
+            <div class="book-rating">
+              <span class="stars">★★★★★</span>
+              <span class="tag">5.0 · 2023-08</span>
+            </div>
+            <div class="book-quote">
+              <p class="handwritten" style="font-size: 1.1rem; color: var(--quote-emphasis);">人是为了活着本身而活着，而不是为了活着之外的任何事物而活着。</p>
+            </div>
+            <p class="book-desc">读完之后会安静很久，是那种简洁却很有力量的作品。苦难与坚韧在笔尖流淌。</p>
+            <div class="book-tags">
+              <span class="tag">1993</span>
+              <span class="tag">中文</span>
+              <span class="tag">小说</span>
+            </div>
+          </article>
+          <article class="book-card reveal">
+            <div class="bookmark">已读</div>
+            <h3 class="book-title">三体全集</h3>
+            <p class="book-author">刘慈欣</p>
+            <div class="book-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="tag">4.8 · 2024-01</span>
+            </div>
+            <p class="book-desc">地球往事三部曲的想象力非常大，黑暗森林法则带来的压迫感也很强。它不是轻松型阅读，但读完会觉得视野被拉开了。</p>
+            <div class="book-tags">
+              <span class="tag">科幻</span>
+              <span class="tag">宇宙尺度</span>
+            </div>
+          </article>
+          <article class="book-card reveal">
+            <div class="bookmark">已读</div>
+            <h3 class="book-title">解忧杂货店</h3>
+            <p class="book-author">东野圭吾</p>
+            <div class="book-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="tag">4.5 · 2023-12</span>
+            </div>
+            <p class="book-desc">不同时空的人通过一家杂货店被连接起来，整体氛围很柔和。很适合在情绪低的时候读。</p>
+            <div class="book-tags">
+              <span class="tag">治愈</span>
+              <span class="tag">推理</span>
+            </div>
+          </article>
         </div>
-        <div class="hero-summary-point">
-          <i class="fas fa-layer-group"></i>
-          <span>书单会同时保留已读回响、在读进度和下一阶段的预备队列。</span>
-        </div>
-        <div class="hero-summary-point">
-          <i class="fas fa-bookmark"></i>
-          <span>更新节奏不算快，但会持续补齐值得留下来的阅读记录。</span>
+        <section id="queue" class="section-header reveal" style="margin-top: 6rem;">
+          <h2>在读与想读 <span class="handwritten" style="font-size: 1.2rem; color: var(--text-dim); font-weight: 400;">(Reading &amp; Queue)</span></h2>
+          <p>还在推进或者已经提前放进书单里的作品，是下一段时间的期待。</p>
+        </section>
+        <div class="masonry-grid">
+          <article class="book-card reveal">
+            <div class="bookmark bookmark-reading">在读</div>
+            <h3 class="book-title">百年孤独</h3>
+            <p class="book-author">加西亚·马尔克斯</p>
+            <div class="book-rating">
+              <span class="stars">★★★★★</span>
+              <span class="tag">进行中</span>
+            </div>
+            <p class="book-desc">魔幻现实主义代表作。目前还在慢慢理顺家族脉络，但那种独特的叙事气质已经很迷人了。</p>
+            <div class="book-tags">
+              <span class="tag">魔幻现实</span>
+              <span class="tag">西班牙语</span>
+            </div>
+          </article>
+          <article class="book-card reveal">
+            <div class="bookmark bookmark-planned">想读</div>
+            <h3 class="book-title">人类群星闪耀时</h3>
+            <p class="book-author">斯蒂芬·茨威格</p>
+            <div class="book-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="tag">待开始</span>
+            </div>
+            <p class="book-desc">十四篇历史特写，写的是那些决定时代走向的关键瞬间。期待值很高。</p>
+            <div class="book-tags">
+              <span class="tag">历史</span>
+              <span class="tag">传记</span>
+            </div>
+          </article>
+          <article class="book-card reveal">
+            <div class="bookmark bookmark-planned">想读</div>
+            <h3 class="book-title">你当像鸟飞往你的山</h3>
+            <p class="book-author">塔拉·韦斯特弗</p>
+            <div class="book-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="tag">待开始</span>
+            </div>
+            <p class="book-desc">一个从极端环境里走出来、最终完成自我重建的故事。适合在想重新校准自己的时候读。</p>
+            <div class="book-tags">
+              <span class="tag">自传</span>
+              <span class="tag">成长</span>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="hero-summary-strip">
-        <span>留下标准</span>
-        <strong>读完之后，依然愿意回头再看一眼。</strong>
-      </div>
-    </aside>
+      <aside class="sidebar">
+        <div class="sidebar-widget reveal">
+          <h3>阅读统计</h3>
+          <div class="vibe-list">
+            <div class="vibe-item">
+              <div class="vibe-icon">03</div>
+              <span>已读记录</span>
+            </div>
+            <div class="vibe-item">
+              <div class="vibe-icon">03</div>
+              <span>在读与预备</span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget reveal">
+          <h3>我的偏好</h3>
+          <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.7;">相比单纯追求数量，我更偏向留下那些读完后还会在脑子里停留很久的书。</p>
+          <div class="handwritten-note">
+            <p class="handwritten" style="color: var(--note-text);">只要它既有故事感，又能让人多想一层，我大概率都会喜欢。</p>
+          </div>
+        </div>
+        <div class="sidebar-widget reveal" style="background: var(--accent-soft); border-color: var(--accent);">
+          <h3>今日氛围</h3>
+          <div class="vibe-list">
+            <div class="vibe-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-sun"></use></svg> 黄金时刻</div>
+            <div class="vibe-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-thermometer"></use></svg> 24°C 舒适</div>
+            <div class="vibe-item"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#book-icon-battery"></use></svg> 离线阅读中</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="footer reveal">
+      <p class="footer-text handwritten">每一本书都是一段旅程的开始。</p>
+      <p style="margin-top: 1rem; color: var(--text-dim); font-size: 0.8rem;">&copy; 2026 我的书房记</p>
+    </footer>
   </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <strong>3</strong>
-      <span>目前已读并留下记录</span>
-    </div>
-    <div class="hero-stat">
-      <strong>3</strong>
-      <span>在读或准备接下来阅读</span>
-    </div>
-    <div class="hero-stat">
-      <strong>小说 + 非虚构</strong>
-      <span>偏爱故事感和思考密度并存的作品</span>
-    </div>
-  </div>
-</section>
-
-<section class="book-section book-section--finished" id="finished">
-  <div class="section-head">
-    <div class="section-copy">
-      <span class="section-kicker">
-        <i class="fas fa-check-circle"></i>
-        Finished
-      </span>
-      <h2>已读书籍</h2>
-      <p>读完之后仍然愿意记住的书，通常要么足够打动人，要么能在情绪和思考上留下明显的余味。</p>
-    </div>
-    <div class="section-aside">
-      <strong>03</strong>
-      <span>像留在书架最显眼一层的三本，读完后依然会想起它们。</span>
-    </div>
-  </div>
-  <div class="book-grid">
-    <article class="book-card book-card--featured">
-      <div class="book-icon">
-        <i class="fas fa-book-open"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--finished">
-            <i class="fas fa-check"></i>
-            已读
-          </span>
-        </div>
-        <h3 class="book-title">活着</h3>
-        <p class="book-author">余华</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-star"></i>
-            5.0 · 2023-08
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★★
-          <span>苦难与坚韧</span>
-        </div>
-        <p class="book-desc">人是为了活着本身而活着，而不是为了活着之外的任何事物而活着。读完之后会安静很久，是那种简洁却很有力量的作品。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            1993
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            中文
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            小说
-          </span>
-        </div>
-      </div>
-    </article>
-    <article class="book-card">
-      <div class="book-icon">
-        <i class="fas fa-robot"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--finished">
-            <i class="fas fa-check"></i>
-            已读
-          </span>
-        </div>
-        <h3 class="book-title">三体全集</h3>
-        <p class="book-author">刘慈欣</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-star"></i>
-            4.8 · 2024-01
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★☆
-          <span>宇宙尺度与人性</span>
-        </div>
-        <p class="book-desc">地球往事三部曲的想象力非常大，黑暗森林法则带来的压迫感也很强。它不是轻松型阅读，但读完会觉得视野被拉开了。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            2006-2010
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            中文
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            科幻
-          </span>
-        </div>
-      </div>
-    </article>
-    <article class="book-card">
-      <div class="book-icon">
-        <i class="fas fa-store"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--finished">
-            <i class="fas fa-check"></i>
-            已读
-          </span>
-        </div>
-        <h3 class="book-title">解忧杂货店</h3>
-        <p class="book-author">东野圭吾</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-star"></i>
-            4.5 · 2023-12
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★☆
-          <span>温暖治愈</span>
-        </div>
-        <p class="book-desc">不同时空的人通过一家杂货店被连接起来，整体氛围很柔和。它不是那种炫技型的推理，但很适合在情绪低的时候读。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            2012
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            日文
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            推理
-          </span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="book-section book-section--queue" id="queue">
-  <div class="section-head">
-    <div class="section-copy">
-      <span class="section-kicker">
-        <i class="fas fa-bookmark"></i>
-        Queue
-      </span>
-      <h2>在读与想读</h2>
-      <p>还在推进或者已经提前放进书单里的作品，更多是“下一段时间想把注意力交给它们”。</p>
-    </div> 
-    <div class="section-aside">
-      <strong>03</strong>
-      <span>一边在读，一边为下一次着迷预热，书单也因此一直保持流动。</span>
-    </div>
-  </div>
-  <div class="book-grid">
-    <article class="book-card book-card--featured">
-      <div class="book-icon">
-        <i class="fas fa-feather-alt"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--reading">
-            <i class="fas fa-spinner"></i>
-            在读
-          </span>
-        </div>
-        <h3 class="book-title">百年孤独</h3>
-        <p class="book-author">加西亚·马尔克斯</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-hourglass-half"></i>
-            阅读进行中
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★★
-          <span>期待值很高</span>
-        </div>
-        <p class="book-desc">魔幻现实主义代表作，故事密度和人物关系都很厚。目前还在慢慢理顺家族脉络，但那种独特的叙事气质已经很迷人了。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            1967
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            西班牙语
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            魔幻现实主义
-          </span>
-        </div>
-      </div>
-    </article>
-    <article class="book-card">
-      <div class="book-icon">
-        <i class="fas fa-star"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--planned">
-            <i class="fas fa-clock"></i>
-            想读
-          </span>
-        </div>
-        <h3 class="book-title">人类群星闪耀时</h3>
-        <p class="book-author">斯蒂芬·茨威格</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-book-reader"></i>
-            书单候选
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★☆
-          <span>历史瞬间切片</span>
-        </div>
-        <p class="book-desc">十四篇历史特写，写的是那些决定时代走向的关键瞬间。朋友推荐得很强烈，已经列进下一阶段想认真看的书里。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            1927
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            德语
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            历史
-          </span>
-        </div>
-      </div>
-    </article>
-    <article class="book-card">
-      <div class="book-icon">
-        <i class="fas fa-dove"></i>
-      </div>
-      <div class="book-body">
-        <div class="book-topline">
-          <span class="book-pill book-pill--planned">
-            <i class="fas fa-clock"></i>
-            想读
-          </span>
-        </div>
-        <h3 class="book-title">你当像鸟飞往你的山</h3>
-        <p class="book-author">塔拉·韦斯特弗</p>
-        <div class="book-meta">
-          <span class="book-badge">
-            <i class="fas fa-mountain"></i>
-            成长与自我教育
-          </span>
-        </div>
-        <div class="book-rating">
-          ★★★★☆
-          <span>很想尽快开始</span>
-        </div>
-        <p class="book-desc">一个从极端成长环境里走出来、最终完成自我重建的故事。光是题材就足够有吸引力，也很适合在想重新校准自己的时候读。</p>
-        <div class="book-tags">
-          <span class="book-tag">
-            <i class="fas fa-calendar"></i>
-            2018
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-language"></i>
-            英文
-          </span>
-          <span class="book-tag">
-            <i class="fas fa-tag"></i>
-            自传
-          </span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="closing-panel">
-  <h3>阅读偏好</h3>
-  <p>相比单纯追求数量，我更偏向留下那些读完后还会在脑子里停留很久的书。无论是小说还是非虚构，只要它既有故事感，又能让人多想一层，我大概率都会喜欢。</p>
-</section>
-
-<hr class="book-divider">
 </div>
 </div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By lymhy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]

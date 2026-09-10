@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.520690.xyz/Limg/main/avatar.webp">
 <meta property="article:published_time" content="2026-03-18T13:56:06.000Z">
-<meta property="article:modified_time" content="2026-04-23T13:32:02.366Z">
+<meta property="article:modified_time" content="2026-04-25T11:55:10.551Z">
 <meta property="article:author" content="lymhy">
 <meta property="article:tag" content="lymhy,lymhy的个人博客,lymhyblog,分享编程开发经验,学习笔记和前端技术文章,技术博客,Github">
 <meta name="twitter:card" content="summary">
@@ -152,488 +152,647 @@
   isHighlightShrink: false,
   isToc: false,
   pageType: 'page'
-}</script><link rel="stylesheet" href="/Lcss/index.css"><link rel="stylesheet" href="/Lfonts/font.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://cdn.jsdelivr.net/npm/lymhy-img@1.0.0/Limg/main/background.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/Limg/main/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div></div></div><div class="page type-devices" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">我的设备</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">我的设备</div><div class="container" id="article-container"><style>
+}</script><link rel="stylesheet" href="/Lcss/index.css"><link rel="stylesheet" href="/Lfonts/font.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://cdn.jsdelivr.net/npm/lymhy-img@1.0.0/Limg/main/background.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/Limg/main/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div></div></div><div class="page type-devices" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">lymhy的个人博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-compass"></i><span> 页面</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 站长资料</span></a></li><li><a class="site-page child" href="/devices/"><i class="fa-fw fas fa-laptop"></i><span> 我的设备</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 我的书单</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">我的设备</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">我的设备</div><div class="container" id="article-container"><style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+  .equipment-page .icon {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: -0.15em;
+    flex: 0 0 auto;
+  }
+  #body-wrap.type-devices,
+  #body-wrap.type-devices > main#content-inner.layout,
+  #body-wrap.type-devices #page,
+  #body-wrap.type-devices #article-container {
+    overflow-x: clip !important;
+  }
+  #body-wrap.type-devices #page,
+  #body-wrap.type-devices #article-container,
+  #body-wrap.type-devices .equipment-page {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
   .equipment-page {
-    --equipment-accent: var(--theme-color);
-    --equipment-accent-rgb: 66, 90, 239;
-    --equipment-surface: var(--card-bg);
-    --equipment-text: var(--text-color);
-    --equipment-subtle: var(--second-text-color);
-    --equipment-border: var(--border-color);
-    --equipment-shadow: 0 18px 40px -24px rgba(15, 23, 42, 0.28);
-    max-width: 960px;
+    --accent: #425aef;
+    --accent-glow: rgba(66, 90, 239, 0.18);
+    --bg-dark: #edf3ff;
+    --bg-card: rgba(255, 255, 255, 0.84);
+    --text-primary: #18233f;
+    --text-secondary: #5f6f90;
+    --border: rgba(66, 90, 239, 0.12);
+    --transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease, background-color 0.26s ease;
+    --hero-start: #e6edff;
+    --hero-end: #f6f8ff;
+    --hero-title-start: #132347;
+    --hero-title-end: #6b7fb2;
+    --surface-soft: rgba(255, 255, 255, 0.52);
+    --surface-strong: rgba(66, 90, 239, 0.08);
+    --tag-bg: rgba(66, 90, 239, 0.06);
+    --panel-bg: radial-gradient(circle at center, #dfe8ff, #edf3ff);
+    --hover-shadow: 0 20px 45px -18px rgba(66, 90, 239, 0.22);
+    --hero-image-opacity: 0.18;
+    --hero-image-filter: saturate(0.85) contrast(1.05);
+    --accent-wash: rgba(66, 90, 239, 0.08);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  [data-theme="dark"] .equipment-page {
+    --accent-glow: rgba(66, 90, 239, 0.3);
+    --bg-dark: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.1);
+    --hero-start: #0f172a;
+    --hero-end: #1e293b;
+    --hero-title-start: #ffffff;
+    --hero-title-end: #94a3b8;
+    --surface-soft: rgba(255, 255, 255, 0.03);
+    --surface-strong: rgba(255, 255, 255, 0.03);
+    --tag-bg: rgba(255, 255, 255, 0.05);
+    --panel-bg: radial-gradient(circle at center, #1e293b, #0f172a);
+    --hover-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --hero-image-opacity: 0.4;
+    --hero-image-filter: saturate(0.8) contrast(1.2);
+    --accent-wash: rgba(66, 90, 239, 0.05);
+  }
+  .equipment-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  .equipment-page h1,
+  .equipment-page h2,
+  .equipment-page h3,
+  .equipment-page .heading-font {
+    font-family: 'Outfit', sans-serif;
+  }
+  .equipment-page .container {
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
-    color: var(--equipment-text);
+    padding: 0 2rem;
   }
-
-  .equipment-page a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .hero-panel {
+  .equipment-page .hero {
     position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    padding: 2.4rem;
-    border: 1px solid var(--equipment-border);
-    border-radius: 32px;
-    background:
-      radial-gradient(circle at top right, rgba(66, 90, 239, 0.14), transparent 32%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.28));
-    box-shadow: var(--equipment-shadow);
+    background: linear-gradient(135deg, var(--hero-start) 0%, var(--hero-end) 100%);
   }
-
-  [data-theme="dark"] .hero-panel {
-    background:
-      radial-gradient(circle at top right, rgba(66, 90, 239, 0.18), transparent 32%),
-      linear-gradient(135deg, rgba(18, 24, 38, 0.82), rgba(18, 24, 38, 0.48));
-  }
-
-  .hero-panel::after {
-    content: "";
+  .equipment-page .hero-bg {
     position: absolute;
-    right: -56px;
-    top: -56px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(66, 90, 239, 0.16), transparent 68%);
-    pointer-events: none;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.45rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid rgba(66, 90, 239, 0.18);
-    background: rgba(66, 90, 239, 0.08);
-    color: var(--equipment-accent);
-    font-size: 0.88rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .hero-panel h1 {
-    margin: 1.1rem 0 0.9rem;
-    font-size: 3rem;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-    color: var(--equipment-text);
-  }
-
-  .hero-lead {
-    max-width: 700px;
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.9;
-    color: var(--equipment-subtle);
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.8rem;
-  }
-
-  .hero-stat {
-    padding: 1rem 1.1rem;
-    border-radius: 22px;
-    border: 1px solid var(--equipment-border);
-    background: rgba(255, 255, 255, 0.52);
-    backdrop-filter: blur(10px);
-  }
-
-  [data-theme="dark"] .hero-stat {
-    background: rgba(19, 28, 45, 0.55);
-  }
-
-  .hero-stat strong {
-    display: block;
-    margin-bottom: 0.2rem;
-    font-size: 1.55rem;
-    line-height: 1.1;
-    color: var(--equipment-text);
-  }
-
-  .hero-stat span {
-    color: var(--equipment-subtle);
-    font-size: 0.92rem;
-  }
-
-  .hero-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1.6rem;
-  }
-
-  .hero-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.7rem 1rem;
-    border-radius: 999px;
-    border: 1px solid var(--equipment-border);
-    background: var(--equipment-surface);
-    color: var(--equipment-text);
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .hero-link:hover {
-    transform: translateY(-2px);
-    border-color: var(--equipment-accent);
-    box-shadow: 0 14px 26px -20px rgba(66, 90, 239, 0.55);
-  }
-
-  .equipment-note {
-    margin: 1.2rem 0 0;
-    color: var(--equipment-subtle);
-    font-size: 0.95rem;
-  }
-
-  .equipment-section {
-    margin-top: 3rem;
-    scroll-margin-top: 88px;
-  }
-
-  .section-head {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .section-copy {
-    max-width: 640px;
-  }
-
-  .section-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: var(--equipment-accent);
-    font-size: 0.86rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .section-copy h2 {
-    margin: 0.5rem 0 0.45rem;
-    font-size: 2.1rem;
-    line-height: 1.2;
-    color: var(--equipment-text);
-  }
-
-  .section-copy p {
-    margin: 0;
-    color: var(--equipment-subtle);
-    line-height: 1.85;
-  }
-
-  .section-line {
-    flex: 1;
-    min-width: 110px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(66, 90, 239, 0.28), transparent);
-  }
-
-  .device-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
-  }
-
-  .device-card {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.4rem;
-    border-radius: 28px;
-    border: 1px solid rgba(var(--equipment-accent-rgb), 0.12);
+    inset: 0;
+    z-index: 0;
     background:
-      radial-gradient(circle at top right, rgba(var(--equipment-accent-rgb), 0.14), transparent 42%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.78));
-    box-shadow: 0 22px 45px -28px rgba(15, 23, 42, 0.34);
-    backdrop-filter: blur(14px);
-    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+      radial-gradient(circle at top right, rgba(66, 90, 239, 0.22), transparent 40%),
+      url('./assets/tech_hero.png') center/cover no-repeat;
+    opacity: var(--hero-image-opacity);
+    filter: var(--hero-image-filter);
+    mask-image: linear-gradient(to bottom, black 50%, transparent);
   }
-
-  .device-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(var(--equipment-accent-rgb), 0.28);
-    box-shadow: 0 28px 48px -30px rgba(var(--equipment-accent-rgb), 0.36);
+  .equipment-page .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 5rem;
+    max-width: 800px;
   }
-
-  .device-card::before {
-    content: "";
+  .equipment-page .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(66, 90, 239, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(66, 90, 239, 0.3);
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  .equipment-page .hero h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to bottom right, var(--hero-title-start) 40%, var(--hero-title-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .equipment-page .hero-lead {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 650px;
+    line-height: 1.8;
+  }
+  .equipment-page .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .equipment-page .stat-item {
+    padding: 1.5rem;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: var(--transition);
+    will-change: transform;
+  }
+  .equipment-page .stat-item:hover {
+    border-color: var(--accent);
+    background: var(--accent-wash);
+    transform: translateY(-2px);
+  }
+  .equipment-page .stat-item strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+  .equipment-page .stat-item span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .equipment-page .section-header {
+    margin: 8rem 0 3rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .equipment-page .section-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 40px;
+    background: var(--accent);
+    border-radius: 0 4px 4px 0;
+    transform: translateY(-50%);
+  }
+  .equipment-page .section-header h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+  .equipment-page .section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+  .equipment-page .device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 1.5rem;
+  }
+  .equipment-page .device-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 1.75rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+  }
+  .equipment-page .device-card::after {
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 46%, rgba(var(--equipment-accent-rgb), 0.08));
-    pointer-events: none;
+    background: radial-gradient(circle at top right, var(--accent-glow), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
-
-  .device-card::after {
-    content: "";
-    position: absolute;
-    left: 1.25rem;
-    right: 1.25rem;
-    top: 0;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(var(--equipment-accent-rgb), 0.28), transparent 72%);
-    opacity: 0.9;
-    pointer-events: none;
+  .equipment-page .device-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(66, 90, 239, 0.4);
+    box-shadow: var(--hover-shadow);
   }
-
-  .device-card > * {
+  .equipment-page .device-card:hover::after {
+    opacity: 1;
+  }
+  .equipment-page .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
   }
-
-  [data-theme="dark"] .device-card {
-    border-color: rgba(148, 163, 184, 0.14);
-    background:
-      radial-gradient(circle at top right, rgba(var(--equipment-accent-rgb), 0.18), transparent 40%),
-      linear-gradient(180deg, rgba(22, 28, 42, 0.92), rgba(14, 19, 31, 0.86));
-    box-shadow: 0 24px 44px -30px rgba(2, 6, 23, 0.8);
+  .equipment-page .device-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.18);
   }
-
-  [data-theme="dark"] .device-card::before {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 48%, rgba(var(--equipment-accent-rgb), 0.1));
+  .equipment-page .device-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(66, 90, 239, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
   }
-
-  .device-icon {
-    position: relative;
-    flex: 0 0 58px;
-    width: 58px;
-    height: 58px;
-    display: grid;
-    place-items: center;
-    border-radius: 20px;
-    border: 1px solid rgba(var(--equipment-accent-rgb), 0.16);
-    background: linear-gradient(145deg, rgba(var(--equipment-accent-rgb), 0.16), rgba(var(--equipment-accent-rgb), 0.06));
-    color: var(--equipment-accent);
+  .equipment-page .device-title {
     font-size: 1.5rem;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.5),
-      0 18px 32px -26px rgba(var(--equipment-accent-rgb), 0.65);
+    font-weight: 700;
+    line-height: 1.3;
   }
-
-  .device-icon::after {
-    content: "";
-    position: absolute;
-    inset: -14px;
-    z-index: -1;
-    background: radial-gradient(circle, rgba(var(--equipment-accent-rgb), 0.16), transparent 70%);
-    opacity: 0.9;
+  .equipment-page .device-specs {
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface-strong);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
   }
-
-  [data-theme="dark"] .device-icon {
-    border-color: rgba(var(--equipment-accent-rgb), 0.22);
-    background: linear-gradient(145deg, rgba(var(--equipment-accent-rgb), 0.22), rgba(var(--equipment-accent-rgb), 0.08));
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.06),
-      0 18px 32px -24px rgba(var(--equipment-accent-rgb), 0.58);
+  .equipment-page .device-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
   }
-
-  .device-body {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .device-topline {
+  .equipment-page .device-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-bottom: 0.7rem;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
   }
-
-  .device-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.38rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid rgba(var(--equipment-accent-rgb), 0.12);
-    background: rgba(var(--equipment-accent-rgb), 0.08);
-    color: var(--equipment-accent);
-    font-size: 0.82rem;
+  .equipment-page .tag {
+    font-size: 0.75rem;
     font-weight: 600;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    color: var(--text-secondary);
+    background: var(--tag-bg);
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
   }
-
-  [data-theme="dark"] .device-pill {
-    border-color: rgba(var(--equipment-accent-rgb), 0.18);
-    background: rgba(var(--equipment-accent-rgb), 0.12);
-    box-shadow: none;
+  .equipment-page .closing-panel {
+    margin: 10rem 0;
+    padding: 5rem 3rem;
+    background: var(--panel-bg);
+    border-radius: 40px;
+    border: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
-
-  .device-title {
-    margin: 0;
-    font-size: 1.35rem;
-    line-height: 1.35;
-    color: var(--equipment-text);
+  .equipment-page .closing-panel h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to bottom, var(--hero-title-start), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-
-  .device-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin-top: 0.7rem;
-    padding: 0.36rem 0.8rem;
-    border: 1px solid rgba(var(--equipment-accent-rgb), 0.1);
-    border-radius: 999px;
-    background: rgba(var(--equipment-accent-rgb), 0.05);
-    color: var(--equipment-subtle);
-    font-size: 0.84rem;
-    font-weight: 500;
-  }
-
-  .device-desc {
-    margin: 0.95rem 0 0;
-    color: var(--equipment-subtle);
-    line-height: 1.88;
-    font-size: 0.98rem;
-  }
-
-  .device-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-top: 1rem;
-    padding-top: 0.95rem;
-    border-top: 1px solid rgba(var(--equipment-accent-rgb), 0.08);
-  }
-
-  .device-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.38rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid rgba(var(--equipment-accent-rgb), 0.08);
-    color: var(--equipment-subtle);
-    font-size: 0.82rem;
-    background: rgba(255, 255, 255, 0.42);
-  }
-
-  [data-theme="dark"] .device-badge {
-    border-color: rgba(var(--equipment-accent-rgb), 0.14);
-    background: rgba(var(--equipment-accent-rgb), 0.08);
-  }
-
-  [data-theme="dark"] .device-tag {
-    border-color: rgba(148, 163, 184, 0.12);
-    background: rgba(255, 255, 255, 0.04);
-  }
-
-  .closing-panel {
-    margin-top: 3rem;
-    padding: 1.5rem 1.6rem;
-    border-radius: 28px;
-    border: 1px dashed rgba(66, 90, 239, 0.32);
-    background: linear-gradient(135deg, rgba(66, 90, 239, 0.06), transparent);
-  }
-
-  .closing-panel h3 {
-    margin: 0 0 0.65rem;
+  .equipment-page .closing-panel p {
     font-size: 1.15rem;
-    color: var(--equipment-text);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
   }
-
-  .closing-panel p {
-    margin: 0;
-    color: var(--equipment-subtle);
-    line-height: 1.85;
+  .equipment-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-
-  .equipment-divider {
-    border: 0;
-    border-top: 1px dashed var(--equipment-border);
-    margin: 2.5rem 0 0.2rem;
-    opacity: 0.72;
+  .equipment-page .reveal.active {
+    opacity: 1;
+    transform: none;
   }
-
-  @media (max-width: 900px) {
-    .hero-panel {
-      padding: 2rem;
+  @media (hover: none), (pointer: coarse) {
+    .equipment-page .stat-item,
+    .equipment-page .device-card {
+      transition: none;
     }
-
-    .hero-panel h1 {
-      font-size: 2.55rem;
+    .equipment-page .stat-item:hover,
+    .equipment-page .device-card:hover {
+      transform: none;
+      box-shadow: none;
     }
-
-    .hero-stats,
-    .device-grid {
+    .equipment-page .device-card::after {
+      display: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .equipment-page *,
+    .equipment-page *::before,
+    .equipment-page *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .equipment-page .container {
+      padding: 0 1.5rem;
+    }
+    .equipment-page .section-header {
+      padding-left: 1rem;
+    }
+    .equipment-page .hero h1 {
+      font-size: 2.75rem;
+    }
+    .equipment-page .section-header h2 {
+      font-size: 2.25rem;
+    }
+    .equipment-page .device-grid {
       grid-template-columns: 1fr;
     }
-  }
-
-  @media (max-width: 640px) {
-    .equipment-page {
-      max-width: 100%;
-    }
-
-    .hero-panel {
-      padding: 1.5rem;
-      border-radius: 24px;
-    }
-
-    .hero-panel h1 {
-      font-size: 2.15rem;
-    }
-
-    .hero-lead {
-      font-size: 1rem;
-    }
-
-    .section-head {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .section-copy h2 {
-      font-size: 1.8rem;
-    }
-
-    .section-line {
-      width: 100%;
-    }
-
-    .device-card {
-      padding: 1.15rem;
-      border-radius: 22px;
-    }
-
-    .device-icon {
-      flex-basis: 48px;
-      width: 48px;
-      height: 48px;
-      font-size: 1.2rem;
-      border-radius: 14px;
-    }
-
-    .device-tags {
-      padding-top: 0.8rem;
-    }
-
-    .device-title {
-      font-size: 1.18rem;
+    .equipment-page .closing-panel {
+      padding: 4rem 1.5rem;
     }
   }
 </style>
-
-<div class="equipment-page"><section class="hero-panel"><div class="hero-eyebrow"><i class="fas fa-laptop-code"></i><span>Devices / Setup</span></div><h1>我的设备 · 数字与生活</h1><p class="hero-lead">围绕移动办公、日常记录和轻量出行搭起来的一套设备组合。它们不一定是参数表里最夸张的那一档，但都在效率、舒适和使用频率上留下了自己的位置。</p><div class="hero-stats"><div class="hero-stat"><strong>8</strong><span>长期在用的核心设备</span></div><div class="hero-stat"><strong>2</strong><span>主要场景：生产力与出行</span></div><div class="hero-stat"><strong>Apple</strong><span>生态为主，体验偏向统一与稳定</span></div></div><div class="hero-nav"><a class="hero-link" href="#productivity"><i class="fas fa-bolt"></i><span>跳到生产力</span></a><a class="hero-link" href="#mobility"><i class="fas fa-route"></i><span>跳到出行</span></a></div><p class="equipment-note">这页会持续更新，设备也会随着生活阶段和使用习惯慢慢变化。</p></section><section class="equipment-section" id="productivity"><div class="section-head"><div class="section-copy"><span class="section-kicker"><i class="fas fa-bolt"></i>Workspace</span><h2>生产力</h2><p>高频使用的一组主力设备，从内容消费到开发创作，再到日常沟通，基本都围绕这套组合展开。</p></div></div><div class="device-grid"><article class="device-card"><div class="device-icon"><i class="fas fa-laptop"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-star"></i> 主力设备</span></div><h3 class="device-title">MacBook Pro 2021 16 英寸</h3><span class="device-badge"><i class="fas fa-microchip"></i> M1 Max / 64GB / 1TB</span><p class="device-desc">目前最核心的生产工具。屏幕素质、续航和性能都很稳，开发、设计这类重度任务都能扛住，用起来踏实又省心。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-memory"></i> 64GB 统一内存</span><span class="device-tag"><i class="fas fa-hdd"></i> 1TB 固态</span><span class="device-tag"><i class="fas fa-display"></i> Liquid 视网膜 XDR</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-tablet-alt"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-sticky-note"></i> 轻办公</span></div><h3 class="device-title">iPad 2020</h3><span class="device-badge"><i class="fas fa-palette"></i> 深空灰 / 128GB</span><p class="device-desc">在轻办公和轻娱乐之间切换很顺，记笔记、看资料、追剧都够用。属于典型“买前生产力，买后依然常用”的设备。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-pencil-alt"></i> 支持 Apple Pencil</span><span class="device-tag"><i class="fas fa-keyboard"></i> 可接键盘</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-mobile-alt"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-signal"></i> 主力手机</span></div><h3 class="device-title">iPhone 15 Pro Max</h3><span class="device-badge"><i class="fas fa-gem"></i> 白色 / 512GB</span><p class="device-desc">大屏、续航和影像都很讨喜，钛金属手感也在线。价格确实会让人心疼，但作为主力机的整体体验很扎实，遗憾是信号表现一般。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-camera"></i> 三摄系统</span><span class="device-tag"><i class="fas fa-battery-three-quarters"></i> 4422mAh</span><span class="device-tag"><i class="fas fa-plug"></i> USB-C</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-mobile"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-hand-paper"></i> 小屏偏爱</span></div><h3 class="device-title">iPhone 12 mini</h3><span class="device-badge"><i class="fas fa-leaf"></i> 绿色 / 128GB</span><p class="device-desc">小尺寸手机里很难替代的一台，单手握持感非常舒服，圆角机身和轻巧重量都很对胃口，唯一明显短板就是续航偏弱。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-hand-paper"></i> 5.4 英寸</span><span class="device-tag"><i class="fas fa-weight-hanging"></i> 133g</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-headphones"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-music"></i> 高频随身</span></div><h3 class="device-title">AirPods 第三代</h3><span class="device-badge"><i class="fas fa-wave-square"></i> 标准版</span><p class="device-desc">开放式耳机里比较均衡的一代，不喜欢入耳式的话很值得考虑。空间音频第一次上手时，确实会有一种“小小被惊艳到”的感觉。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-record-vinyl"></i> 空间音频</span><span class="device-tag"><i class="fas fa-tint"></i> IPX4 抗汗抗水</span></div></div></article></div></section><section class="equipment-section" id="mobility"><div class="section-head"><div class="section-copy"><span class="section-kicker"><i class="fas fa-route"></i>Mobility</span><h2>出行</h2><p>穿戴设备和随身装备决定了外出时是否轻松。这一组更偏“陪伴感”，是日常通勤和出门时最常带上的东西。</p></div></div><div class="device-grid"><article class="device-card"><div class="device-icon"><i class="fas fa-clock"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-heartbeat"></i> 健康记录</span></div><h3 class="device-title">Apple Watch Series 8</h3><span class="device-badge"><i class="fas fa-circle"></i> 黑色</span><p class="device-desc">健康提醒和运动记录都很有存在感，站立提醒虽然烦，但确实能把人从久坐里拽出来。配合 Apple 生态体验完整，短板依然是续航。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-heartbeat"></i> 血氧 / 心电图</span><span class="device-tag"><i class="fas fa-temperature-high"></i> 体温感应</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-briefcase"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-suitcase-rolling"></i> 通勤主力</span></div><h3 class="device-title">NATIONAL GEOGRAPHIC 双肩包</h3><span class="device-badge"><i class="fas fa-mountain"></i> 黑色</span><p class="device-desc">通勤和短途出行的主力包，能稳稳装下 16 英寸笔记本，背负舒适，小口袋设计和底部防雨罩都很实用。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-laptop"></i> 可装 16 英寸</span><span class="device-tag"><i class="fas fa-cloud-rain"></i> 底部防雨罩</span></div></div></article><article class="device-card"><div class="device-icon"><i class="fas fa-backpack"></i></div><div class="device-body"><div class="device-topline"><span class="device-pill"><i class="fas fa-feather-alt"></i> 轻装外出</span></div><h3 class="device-title">NATIONAL GEOGRAPHIC 学生书包</h3><span class="device-badge"><i class="fas fa-heart"></i> 红白色</span><p class="device-desc">偏轻便的一只，颜值在线，也比较实用。适合装些日常随身物件，属于看着顺眼、背着也省心的类型。</p><div class="device-tags"><span class="device-tag"><i class="fas fa-child"></i> 轻便设计</span></div></div></article></div></section><section class="closing-panel"><h3>设备偏好</h3><p>如果把这页当成一份长期更新的设备档案，那它目前的关键词大概是：稳定、轻量、统一生态，以及在日常里真正会被频繁使用。参数当然重要，但顺手和舒服更重要。</p></section><hr class="equipment-divider"></div>
+<div class="equipment-page">
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="device-icon-cpu" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="10" rx="2"></rect>
+      <path d="M9 1v3"></path>
+      <path d="M15 1v3"></path>
+      <path d="M9 20v3"></path>
+      <path d="M15 20v3"></path>
+      <path d="M20 9h3"></path>
+      <path d="M20 14h3"></path>
+      <path d="M1 9h3"></path>
+      <path d="M1 14h3"></path>
+    </symbol>
+    <symbol id="device-icon-laptop" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="11" rx="2"></rect>
+      <path d="M2 19h20"></path>
+    </symbol>
+    <symbol id="device-icon-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M12 10v6"></path>
+      <path d="M12 7h.01"></path>
+    </symbol>
+    <symbol id="device-icon-tablet" viewBox="0 0 24 24">
+      <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+      <path d="M12 17h.01"></path>
+    </symbol>
+    <symbol id="device-icon-smartphone" viewBox="0 0 24 24">
+      <rect x="7" y="2" width="10" height="20" rx="2"></rect>
+      <path d="M12 18h.01"></path>
+    </symbol>
+    <symbol id="device-icon-headphones" viewBox="0 0 24 24">
+      <path d="M4 12a8 8 0 0 1 16 0"></path>
+      <rect x="3" y="12" width="4" height="8" rx="2"></rect>
+      <rect x="17" y="12" width="4" height="8" rx="2"></rect>
+    </symbol>
+    <symbol id="device-icon-watch" viewBox="0 0 24 24">
+      <rect x="7" y="6" width="10" height="12" rx="3"></rect>
+      <path d="M9 2h6"></path>
+      <path d="M9 22h6"></path>
+    </symbol>
+    <symbol id="device-icon-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="12" rx="2"></rect>
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+      <path d="M3 12h18"></path>
+    </symbol>
+    <symbol id="device-icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 11H7L6 8Z"></path>
+      <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+    </symbol>
+  </svg>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 18px; height: 18px;"><use href="#device-icon-cpu"></use></svg>
+          <span>Devices / Digital Setup</span>
+        </div>
+        <h1>我的设备 · 数字与生活</h1>
+        <p class="hero-lead">围绕移动办公、日常记录和轻量出行搭起来的一套设备组合。它们不一定是参数表里最夸张的那一档，但都在效率、舒适和使用频率上留下了自己的位置。</p>
+        <div class="stats-row">
+          <div class="stat-item">
+            <strong>8</strong>
+            <span>核心设备</span>
+          </div>
+          <div class="stat-item">
+            <strong>Apple</strong>
+            <span>统一生态系统</span>
+          </div>
+          <div class="stat-item">
+            <strong>Pro</strong>
+            <span>生产力优先</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <section id="productivity">
+      <div class="section-header reveal">
+        <h2>生产力</h2>
+        <p>高频使用的一组主力设备，从内容消费到开发创作，再到日常沟通，基本都围绕这套组合展开。</p>
+      </div>
+      <div class="device-grid">
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-laptop"></use></svg></div>
+            <div>
+              <span class="device-badge">主力设备</span>
+              <h3 class="device-title">MacBook Pro 2021 16"</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            M1 Max / 64GB / 1TB
+          </div>
+          <p class="device-desc">目前最核心的生产工具。屏幕素质、续航和性能都很稳，开发、设计这类重度任务都能扛住，用起来踏实又省心。</p>
+          <div class="device-tags">
+            <span class="tag">64GB 统一内存</span>
+            <span class="tag">1TB SSD</span>
+            <span class="tag">XDR Display</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-tablet"></use></svg></div>
+            <div>
+              <span class="device-badge">轻办公</span>
+              <h3 class="device-title">iPad 2020</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            深空灰 / 128GB
+          </div>
+          <p class="device-desc">在轻办公和轻娱乐之间切换很顺，记笔记、看资料、追剧都够用。属于典型“买前生产力，买后依然常用”的设备。</p>
+          <div class="device-tags">
+            <span class="tag">Apple Pencil</span>
+            <span class="tag">Keyboard Support</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-smartphone"></use></svg></div>
+            <div>
+              <span class="device-badge">主力手机</span>
+              <h3 class="device-title">iPhone 15 Pro Max</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            白色 / 512GB
+          </div>
+          <p class="device-desc">大屏、续航和影像都很讨喜，钛金属手感也在线。虽然价格心疼，但整体体验很扎实，遗憾是信号表现一般。</p>
+          <div class="device-tags">
+            <span class="tag">三摄系统</span>
+            <span class="tag">4422mAh</span>
+            <span class="tag">USB-C</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-smartphone"></use></svg></div>
+            <div>
+              <span class="device-badge">小屏偏爱</span>
+              <h3 class="device-title">iPhone 12 mini</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            绿色 / 128GB
+          </div>
+          <p class="device-desc">小尺寸手机里很难替代的一台，单手握持感非常舒服，轻巧重量对胃口，唯一短板就是续航偏弱。</p>
+          <div class="device-tags">
+            <span class="tag">5.4 英寸</span>
+            <span class="tag">133g</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-headphones"></use></svg></div>
+            <div>
+              <span class="device-badge">高频随身</span>
+              <h3 class="device-title">AirPods 3rd Gen</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            标准版
+          </div>
+          <p class="device-desc">开放式耳机里比较均衡的一代。空间音频第一次上手时，确实会有一种“小小被惊艳到”的感觉。</p>
+          <div class="device-tags">
+            <span class="tag">Spatial Audio</span>
+            <span class="tag">IPX4 Water Resistant</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="mobility">
+      <div class="section-header reveal">
+        <h2>出行</h2>
+        <p>穿戴设备和随身装备决定了外出时是否轻松。这一组更偏“陪伴感”，是日常通勤和出门时最常带上的东西。</p>
+      </div>
+      <div class="device-grid">
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-watch"></use></svg></div>
+            <div>
+              <span class="device-badge">健康记录</span>
+              <h3 class="device-title">Apple Watch Series 8</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            黑色
+          </div>
+          <p class="device-desc">健康提醒和运动记录很有存在感，站立提醒能把人从久坐里拽出来。配合生态体验完整，短板依然是续航。</p>
+          <div class="device-tags">
+            <span class="tag">血氧 / 心电图</span>
+            <span class="tag">体温感应</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-briefcase"></use></svg></div>
+            <div>
+              <span class="device-badge">通勤主力</span>
+              <h3 class="device-title">Nat-Geo 双肩包</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            黑色 / 16" Support
+          </div>
+          <p class="device-desc">通勤和短途出行的主力包，能稳稳装下 16 英寸笔记本，背负舒适，小口袋设计和底部防雨罩都很实用。</p>
+          <div class="device-tags">
+            <span class="tag">Laptop Optimized</span>
+            <span class="tag">Rain Cover</span>
+          </div>
+        </article>
+        <article class="device-card reveal">
+          <div class="card-header">
+            <div class="device-icon"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#device-icon-bag"></use></svg></div>
+            <div>
+              <span class="device-badge">轻装外出</span>
+              <h3 class="device-title">Nat-Geo 学生书包</h3>
+            </div>
+          </div>
+          <div class="device-specs">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><use href="#device-icon-info"></use></svg>
+            红白色
+          </div>
+          <p class="device-desc">偏轻便的一只，颜值在线，也比较实用。适合装些日常随身物件，属于看着顺眼、背着也省心的类型。</p>
+          <div class="device-tags">
+            <span class="tag">Lightweight</span>
+            <span class="tag">Daily Carrier</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="closing-panel reveal">
+      <h3>设备偏好</h3>
+      <p>如果把这页当成一份长期更新的设备档案，那它目前的关键词大概是：稳定、轻量、统一生态，以及在日常里真正会被频繁使用。参数当然重要，但顺手和舒服更重要。</p>
+    </div>
+  </div>
+</div>
 </div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By lymhy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
